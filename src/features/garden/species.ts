@@ -286,7 +286,11 @@ export const ZONE_TEXT: Record<Zone, string> = {
 /** One sentence per species for RULES.md and the plan. */
 export function speciesRule(info: SpeciesInfo): string {
   const where = info.zones.map((z) => ZONE_TEXT[z]).join(' or ');
-  const parts = [`planted ${monthRange(info.sow)} on ${where}`, `grows on rain in ${monthRange(info.grows)}`];
+  const grows = monthRange(info.grows);
+  const parts = [
+    `planted ${monthRange(info.sow)} on ${where}`,
+    `grows on rain ${grows === 'all year' ? grows : `in ${grows}`}`,
+  ];
   parts.push(`fully grown at stage ${info.maxStage}`);
   if (info.kind === 'tree')
     parts.push(`${info.spacing} columns from other trees and ${TREE_MARGIN} from the garden's edge`);

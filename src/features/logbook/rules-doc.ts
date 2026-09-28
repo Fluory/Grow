@@ -1,0 +1,73 @@
+import {
+  CONDITION_INFO,
+  FALL_COOLDOWN,
+  FALL_FROM,
+  monthRange,
+  SPECIES_LIST,
+  speciesRule,
+  STEPPING_MAX_WATER,
+  STRUCTURE_LIST,
+  THRESHOLDS,
+  TREE_LIMIT,
+} from '@/features/garden';
+import { WEATHER_EMOJI } from './logbook';
+
+/** The order in which `classify` checks the conditions. */
+const PRIORITY = ['storm', 'snow', 'frost', 'rain', 'sun', 'cloudy'] as const;
+
+/** RULES.md – the world rules in prose, generated from the code that enforces them. */
+export function renderRulesDoc(): string {
+  const out: string[] = [
+    '# The rules of the garden',
+    '',
+    '> Generated from `src/features/garden/` by `npm run world:render` – the code enforces every sentence below.',
+    '> Change the code, not this file.',
+    '',
+    'Every morning the routine records **yesterday’s weather in Heilbronn** (Open-Meteo, daily values) and',
+    'reduces it to one condition. First nature acts – then the gardener makes **exactly one choice**.',
+    '',
+    '## 1 · Nature: rain grows, sun ripens, frost stops, storm fells',
+    '',
+    'The conditions are checked in this order; the first that matches is the day’s weather.',
+    '',
+    '| | Condition | What it does |',
+    '|---|---|---|',
+    ...PRIORITY.map((c) => `| ${WEATHER_EMOJI[c]} | **${CONDITION_INFO[c].label}** | ${CONDITION_INFO[c].effect} |`),
+    '',
+    `- Order: storm (gusts ≥ ${THRESHOLDS.stormGust} km/h or wind ≥ ${THRESHOLDS.stormWind} km/h) → snow (≥ ${THRESHOLDS.snow} cm) → frost (night < ${THRESHOLDS.frost} °C) → rain (≥ ${THRESHOLDS.rain} mm) → sun (≥ ${THRESHOLDS.sun} h) → grey.`,
+    `- The stream has levels 0–8. Because its bed is a trough, higher water is also wider water; low water leaves sand banks.`,
+    `- Ice melts on the first day above 5 °C; snow melts from 3 °C (faster with rain or 8 °C).`,
+    `- A storm fells the tallest tree that is at least ${Math.round(FALL_FROM * 100)} % grown – at most one tree every ${FALL_COOLDOWN} days. Otherwise a paper boat strands on the sand bank; rising water carries it away.`,
+    '- Annual flowers wilt at the first frost; their dry stalks are cleared on the first day of spring (March).',
+    '- Blossoms and fruit only exist in their months; unharvested fruit falls when its season ends.',
+    '- If the weather service cannot be reached, yesterday’s weather is repeated and marked as repeated.',
+    '',
+    '## 2 · The gardener: one choice a day',
+    '',
+    '| Choice | Rule |',
+    '|---|---|',
+    '| 🌱 **plant** | one plant of a species, in its planting months, on free ground that suits it (see below). Nothing can be planted in frozen or snowy ground. |',
+    '| 🔨 **build** | one structure whose requirement is met (see below). |',
+    '| 💧 **water** | one growing plant grows one stage – only on a dry day (sun or grey) and in its growing months. |',
+    '| 🧺 **harvest** | pick the ripe fruit of one plant (at least three apples, or a sunflower’s seed head). |',
+    '| 🪑 **rest** | always allowed – some days the garden needs nothing. |',
+    '',
+    '## 3 · Plants',
+    '',
+    `The garden is 64 columns wide with three rows (back, middle, front). A stream crosses it near column 44. Trees need room: at most ${TREE_LIMIT} at once.`,
+    '',
+    '| Plant | Planting | Rules |',
+    '|---|---|---|',
+    ...SPECIES_LIST.map((s) => `| **${s.label}** | ${monthRange(s.sow)} | ${speciesRule(s)} |`),
+    '',
+    '## 4 · Things to build',
+    '',
+    '| Structure | At most | Requirement |',
+    '|---|---|---|',
+    ...STRUCTURE_LIST.map((s) => `| **${s.label}** | ${s.max} | It ${s.rule}. |`),
+    '',
+    `Stepping stones need the stream at level ${STEPPING_MAX_WATER} or lower when they are laid.`,
+    '',
+  ];
+  return out.join('\n');
+}

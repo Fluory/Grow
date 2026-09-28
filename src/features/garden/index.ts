@@ -66,6 +66,7 @@ export {
   ROWS,
   SPECIES_IDS,
   STRUCTURE_TYPES,
+  WeatherSchema,
   WIDTH,
   type Action,
   type Buildable,
