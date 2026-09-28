@@ -3,26 +3,36 @@ import {
   CONDITION_INFO,
   createRng,
   describeWeather,
-  formatDate,
-  groundHeight,
   growth,
   hashString,
   replay,
   seasonOf,
   SPECIES,
-  waterEdges,
-  waterHeight,
   WIDTH,
   type DayEntry,
   type Garden,
   type Plant,
   type Structure,
-  type Weather,
   type World,
 } from '@/features/garden';
-import { GLYPH_HEIGHT, rasterText, textWidth, wrapText } from './font';
-import { CAPTION, CONDITION_COLOR, meadowFor, SAND, skyFor, SNOW, SOIL, WATER } from './palette';
-import { ellipse, mix, plantSvg } from './plant-svg';
+import { captionLayer } from './caption';
+import {
+  CAPTION_HEIGHT,
+  cellView,
+  f,
+  groundY,
+  ROW_HAZE,
+  ROW_T,
+  SCENE_HEIGHT,
+  SVG_WIDTH,
+  UNIT,
+  waterLine,
+  type GardenPicture,
+  type GardenSvgOptions,
+} from './layout';
+import { CAPTION, skyFor } from './palette';
+import { ellipse, plantSvg } from './plant-svg';
+import { groundLayer, skyLayer, soilLayer } from './scenery';
 import { structureSvg } from './structure-svg';
 
 /**
@@ -31,301 +41,8 @@ import { structureSvg } from './structure-svg';
  * soil with roots and bulbs. Pure string building, deterministic, animated with CSS only.
  */
 
-export const SVG_WIDTH = 1024;
-export const UNIT = 16;
-export const SCENE_HEIGHT = 470;
-export const CAPTION_HEIGHT = 96;
-const Y0 = 366;
-const BAND = 26;
-const ROW_T = [-0.65, 0, 0.65] as const;
-const ROW_SCALE = [0.84, 0.92, 1] as const;
-const ROW_HAZE = [0.2, 0.08, 0] as const;
-const PAD = 28;
-
-export interface GardenPicture {
-  name: string;
-  garden: Garden;
-  entry: DayEntry;
-  /** Weather of up to the last 30 recorded days, oldest first. */
-  recent: (Weather | undefined)[];
-  /** 0–1: how green the grass is (rain days of the last three weeks). */
-  lush: number;
-}
-
-export interface GardenSvgOptions {
-  animated?: boolean;
-  caption?: boolean;
-  /** Mark the element created on this day. */
-  highlight?: boolean;
-}
-
-const f = (n: number) => (Math.round(n * 10) / 10).toString();
 const escapeXml = (text: string) =>
   text.replace(/[<>&"']/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&apos;' })[c] ?? c);
-
-/** Screen y of the ground at column position x (units) and depth t (−1 back … 1 front). */
-export function groundY(x: number, t: number): number {
-  return Y0 + t * BAND - groundHeight(x) * UNIT;
-}
-
-function waterLine(level: number, t: number): number | null {
-  const h = waterHeight(level);
-  return h === null ? null : Y0 + t * BAND - h * UNIT;
-}
-
-/** Screen position and unit size of a cell. */
-export function cellView(x: number, row: number): { x: number; y: number; unit: number } {
-  const t = ROW_T[row] ?? 0;
-  return { x: (x + 0.5) * UNIT, y: groundY(x + 0.5, t), unit: UNIT * (ROW_SCALE[row] ?? 1) };
-}
-
-function textPath(text: string): string {
-  const runs: [number, number, number][] = [];
-  const pixels: [number, number][] = [];
-  rasterText(text, (x, y) => pixels.push([x, y]));
-  pixels.sort((a, b) => a[1] - b[1] || a[0] - b[0]);
-  for (const [x, y] of pixels) {
-    const last = runs[runs.length - 1];
-    if (last && last[1] === y && last[0] + last[2] === x) last[2]++;
-    else runs.push([x, y, 1]);
-  }
-  return runs.map(([x, y, w]) => `M${x} ${y}h${w}v1h-${w}z`).join('');
-}
-
-function profile(t: number, from = 0, to = WIDTH, step = 0.5): [number, number][] {
-  const points: [number, number][] = [];
-  for (let x = from; x <= to + 1e-6; x += step) points.push([x * UNIT, groundY(x, t)]);
-  return points;
-}
-
-const poly = (points: [number, number][]) => `M${points.map(([x, y]) => `${f(x)} ${f(y)}`).join('L')}Z`;
-
-// ---- layers --------------------------------------------------------------------------
-
-function skyLayer(p: GardenPicture, animated: boolean): string {
-  const season = seasonOf(p.garden.date);
-  const sky = skyFor(p.garden.weather?.condition, season);
-  const rng = createRng(hashString(`sky:${p.garden.date}`));
-  const out = [
-    `<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${sky.top}"/><stop offset="1" stop-color="${sky.bottom}"/></linearGradient>` +
-      `<radialGradient id="sun"><stop offset="0" stop-color="${sky.sun ?? '#fff'}" stop-opacity=".9"/><stop offset="1" stop-color="${sky.sun ?? '#fff'}" stop-opacity="0"/></radialGradient></defs>`,
-    `<rect width="${SVG_WIDTH}" height="${SCENE_HEIGHT}" fill="url(#sky)"/>`,
-  ];
-  if (sky.sun) {
-    out.push(
-      `<circle cx="850" cy="92" r="92" fill="url(#sun)"/>`,
-      `<circle cx="850" cy="92" r="30" fill="${sky.sun}"/>`,
-    );
-  }
-  const clouds: string[] = [];
-  const count = Math.round(sky.clouds * 8);
-  for (let i = 0; i < count; i++) {
-    const cx = ((i + 0.5) / count) * SVG_WIDTH + (rng() - 0.5) * 90;
-    const cy = 40 + rng() * 120 * (1 - sky.clouds * 0.5);
-    const w = 60 + rng() * 70 + sky.clouds * 50;
-    const blobs: string[] = [];
-    for (let b = 0; b < 5; b++) {
-      const bx = cx + (b - 2) * w * 0.22 + (rng() - 0.5) * 10;
-      const r = w * (0.2 + (b === 2 ? 0.14 : 0) + rng() * 0.08);
-      blobs.push(`<circle cx="${f(bx)}" cy="${f(cy - r * 0.35)}" r="${f(r)}"/>`);
-    }
-    clouds.push(
-      `<g fill="${sky.cloudShade}">${blobs.join('')}</g><path d="${ellipse(cx, cy, w * 0.62, w * 0.16, 0)}" fill="${sky.cloudShade}"/>`,
-      `<g fill="${sky.cloud}" transform="translate(-3 -4)">${blobs.join('')}</g>`,
-    );
-  }
-  if (clouds.length > 0) out.push(`<g${animated ? ' class="cl"' : ''}>${clouds.join('')}</g>`);
-
-  // the vineyard hills around Heilbronn
-  const far: [number, number][] = [[0, 300]];
-  const near: [number, number][] = [[0, 330]];
-  for (let x = 0; x <= SVG_WIDTH; x += 32) {
-    far.push([x, 262 + Math.sin(x / 170 + 1.3) * 16 + Math.sin(x / 61) * 4]);
-    near.push([x, 300 + Math.sin(x / 120 + 4.1) * 14 + Math.sin(x / 47) * 3]);
-  }
-  far.push([SVG_WIDTH, 340], [0, 340]);
-  near.push([SVG_WIDTH, 360], [0, 360]);
-  out.push(`<path d="${poly(far)}" fill="${sky.hills[0]}"/>`, `<path d="${poly(near)}" fill="${sky.hills[1]}"/>`);
-  const rows: string[] = [];
-  for (let r = 1; r <= 4; r++) {
-    const line = near.slice(1, -2).map(([x, y]) => `${f(x)} ${f(y + r * 7)}`);
-    rows.push(`M${line.join('L')}`);
-  }
-  out.push(
-    `<path d="${rows.join('')}" stroke="${mix(sky.hills[1], '#3f5a34', 0.3)}" stroke-width="1.4" stroke-dasharray="2 5" fill="none"/>`,
-  );
-  if (p.garden.nature.snow > 0) {
-    out.push(`<path d="${poly(near)}" fill="${SNOW}" fill-opacity="${0.25 + p.garden.nature.snow * 0.15}"/>`);
-  }
-  return out.join('');
-}
-
-function groundLayer(p: GardenPicture): string {
-  const g = p.garden;
-  const season = seasonOf(g.date);
-  const meadow = meadowFor(season, p.lush);
-  const out: string[] = [];
-  const back = profile(-1);
-  const front = profile(1);
-  out.push(`<path d="${poly([...back, ...[...front].reverse()])}" fill="${meadow.top}"/>`);
-
-  // grass texture – denser after rain
-  const rng = createRng(hashString(`grass:${g.date}`));
-  const blades: string[] = [];
-  const count = Math.round(140 + p.lush * 220);
-  for (let i = 0; i < count; i++) {
-    const x = rng() * WIDTH;
-    if (Math.abs(x - CHANNEL.center) < CHANNEL.halfWidth) continue;
-    const t = rng() * 2 - 1;
-    const y = groundY(x, t);
-    const h = (2 + rng() * 3.5) * (0.6 + p.lush * 0.6);
-    blades.push(`M${f(x * UNIT)} ${f(y)}l${f((rng() - 0.5) * 3)} ${f(-h)}`);
-  }
-  out.push(`<path d="${blades.join('')}" stroke="${meadow.blade}" stroke-width="1.2" stroke-linecap="round"/>`);
-
-  // sand in the channel, then water or ice
-  const c0 = CHANNEL.center - CHANNEL.halfWidth + 0.3;
-  const c1 = CHANNEL.center + CHANNEL.halfWidth - 0.3;
-  out.push(
-    `<path d="${poly([...profile(-1, c0, c1, 0.25), ...profile(1, c0, c1, 0.25).reverse()])}" fill="${SAND.dry}"/>`,
-  );
-  // the east bank faces away from the light
-  const east0 = CHANNEL.center + 0.2;
-  out.push(
-    `<path d="${poly([...profile(-1, east0, c1, 0.25), ...profile(1, east0, c1, 0.25).reverse()])}" fill="#6b4a2a" fill-opacity=".16"/>`,
-  );
-  const edges = waterEdges(g.nature.water);
-  const wb = waterLine(g.nature.water, -1);
-  const wf = waterLine(g.nature.water, 1);
-  if (edges && wb !== null && wf !== null) {
-    const [l, r] = edges;
-    const color = g.nature.ice ? WATER.ice : WATER.surface;
-    out.push(
-      `<path d="M${f(l * UNIT)} ${f(wb)}L${f(r * UNIT)} ${f(wb)}L${f(r * UNIT)} ${f(wf)}L${f(l * UNIT)} ${f(wf)}Z" fill="${color}"/>`,
-    );
-    if (g.nature.ice) {
-      const cracks: string[] = [];
-      for (let i = 0; i < 5; i++) {
-        const x = l + ((r - l) * (i + 0.5)) / 5;
-        cracks.push(`M${f(x * UNIT)} ${f(wb + 6)}l${f(6 - i * 3)} ${f(14)}l${f(-4)} ${f(12)}`);
-      }
-      out.push(`<path d="${cracks.join('')}" stroke="${WATER.iceLine}" stroke-width="1" fill="none"/>`);
-    } else {
-      const shine: string[] = [];
-      for (let i = 0; i < 4; i++) {
-        const y = wb + ((wf - wb) * (i + 0.6)) / 4;
-        const x = l + 0.4 + ((r - l - 1.2) * ((i * 37) % 10)) / 10;
-        shine.push(`M${f(x * UNIT)} ${f(y)}h${f(Math.min(22, (r - l) * UNIT * 0.3))}`);
-      }
-      out.push(
-        `<path class="sh" d="${shine.join('')}" stroke="${WATER.shine}" stroke-width="1.6" stroke-linecap="round"/>`,
-      );
-    }
-  }
-  if (g.nature.snow > 0) {
-    out.push(
-      `<path d="${poly([...back, ...[...front].reverse()])}" fill="${SNOW}" fill-opacity="${f(0.45 + g.nature.snow * 0.17)}"/>`,
-    );
-  }
-  return out.join('');
-}
-
-/** The front face: a cross-section of the soil with roots, bulbs, stones and the stream. */
-function soilLayer(p: GardenPicture): string {
-  const g = p.garden;
-  const edge = profile(1, 0, WIDTH, 0.25);
-  const down = (dy: number) => edge.map(([x, y]) => [x, y + dy] as [number, number]);
-  const bottom: [number, number][] = [
-    [SVG_WIDTH, SCENE_HEIGHT],
-    [0, SCENE_HEIGHT],
-  ];
-  const out = [
-    `<path d="${poly([...edge, ...bottom])}" fill="${SOIL.deep}"/>`,
-    `<path d="${poly([...edge, ...down(52).reverse()])}" fill="${SOIL.mid}"/>`,
-    `<path d="${poly([...edge, ...down(16).reverse()])}" fill="${SOIL.top}"/>`,
-  ];
-  const meadow = meadowFor(seasonOf(g.date), p.lush);
-  out.push(
-    `<path d="M${edge.map(([x, y]) => `${f(x)} ${f(y)}`).join('L')}" stroke="${g.nature.snow > 0 ? SNOW : meadow.front}" stroke-width="4" fill="none"/>`,
-  );
-
-  const rng = createRng(0x51);
-  const stones: string[] = [];
-  for (let i = 0; i < 26; i++) {
-    const x = rng() * SVG_WIDTH;
-    const y = groundY(x / UNIT, 1) + 30 + rng() * 70;
-    if (y > SCENE_HEIGHT - 4) continue;
-    stones.push(ellipse(x, y, 4 + rng() * 9, 3 + rng() * 5, (rng() - 0.5) * 0.6));
-  }
-  out.push(`<path d="${stones.join('')}" fill="${SOIL.stone}" fill-opacity=".55"/>`);
-
-  // roots grow with the plant
-  const roots: string[] = [];
-  for (const plant of g.plants) {
-    if (plant.species === 'waterlily') continue;
-    const info = SPECIES[plant.species];
-    const x = (plant.x + 0.5) * UNIT;
-    const y = groundY(plant.x + 0.5, 1) + 2;
-    const r = createRng(hashString(`root:${plant.id}`));
-    const size = growth(plant);
-    const reach = info.kind === 'tree' ? 26 + 70 * size : info.kind === 'shrub' ? 10 + 22 * size : 6 + 10 * size;
-    const n = info.kind === 'tree' ? 7 : 3;
-    for (let i = 0; i < n; i++) {
-      let px = x + (r() - 0.5) * 4;
-      let py = y;
-      let angle = Math.PI / 2 + (r() - 0.5) * 1.9;
-      const parts = [`M${f(px)} ${f(py)}`];
-      for (let s = 0; s < 3; s++) {
-        const len = (reach / 3) * (0.7 + r() * 0.5);
-        px += Math.cos(angle) * len;
-        py += Math.sin(angle) * len * 0.8;
-        parts.push(`L${f(px)} ${f(Math.min(py, SCENE_HEIGHT - 3))}`);
-        angle += (r() - 0.5) * 0.7;
-      }
-      roots.push(parts.join(''));
-    }
-  }
-  if (roots.length > 0)
-    out.push(
-      `<path d="${roots.join('')}" stroke="${SOIL.root}" stroke-opacity=".55" stroke-width="1.4" fill="none" stroke-linecap="round"/>`,
-    );
-
-  const bulbs = g.plants
-    .filter((pl) => pl.species === 'tulip')
-    .map((pl) => {
-      const x = (pl.x + 0.5) * UNIT + (pl.row - 1) * 3;
-      const y = groundY(pl.x + 0.5, 1) + 13 + pl.row * 3;
-      return `<path d="M${f(x)} ${f(y - 7)}Q${f(x + 6)} ${f(y)} ${f(x)} ${f(y + 3)}Q${f(x - 6)} ${f(y)} ${f(x)} ${f(y - 7)}Z" fill="${SOIL.bulb}"/>`;
-    });
-  out.push(...bulbs);
-
-  if (g.weather?.condition === 'rain') {
-    const r = createRng(hashString(`worm:${g.date}`));
-    for (let i = 0; i < 2; i++) {
-      const x = 40 + r() * (SVG_WIDTH - 80);
-      if (Math.abs(x / UNIT - CHANNEL.center) < CHANNEL.halfWidth + 1) continue;
-      const y = groundY(x / UNIT, 1) + 10 + r() * 8;
-      out.push(
-        `<path d="M${f(x)} ${f(y)}q4 -4 8 0t8 0t8 0" stroke="${SOIL.worm}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`,
-      );
-    }
-  }
-
-  // the stream in cross-section
-  const edges = waterEdges(g.nature.water);
-  const wf = waterLine(g.nature.water, 1);
-  if (edges && wf !== null) {
-    const [l, r] = edges;
-    const bed = profile(1, l, r, 0.1);
-    out.push(
-      `<path d="${poly([[l * UNIT, wf], ...bed.slice(1, -1), [r * UNIT, wf]])}" fill="${g.nature.ice ? WATER.ice : WATER.deep}" fill-opacity="${g.nature.ice ? 0.95 : 0.9}"/>`,
-    );
-    out.push(
-      `<path d="M${f(l * UNIT)} ${f(wf)}H${f(r * UNIT)}" stroke="${g.nature.ice ? WATER.iceLine : WATER.shine}" stroke-width="2"/>`,
-    );
-  }
-  return out.join('');
-}
 
 function elementTop(el: Plant | Structure): number {
   if ('species' in el) return Math.max(0.8, SPECIES[el.species].height * growth(el));
@@ -441,48 +158,6 @@ function weatherLayer(p: GardenPicture, animated: boolean): string {
   return out.join('');
 }
 
-function captionLayer(p: GardenPicture): string {
-  const e = p.entry;
-  const w = p.garden.weather;
-  const top = SCENE_HEIGHT;
-  const small = 3;
-  const big = 4;
-  const accent = w ? CONDITION_COLOR[w.condition] : CAPTION.accent;
-  const left = `${p.name} · DAY ${e.day} · ${formatDate(e.date)}`;
-  const right = w
-    ? `${describeWeather(w)} · ${Math.round(w.tmax)}°/${Math.round(w.tmin)}°${w.fallback ? ' (REPEATED)' : ''}`
-    : 'HEILBRONN · 49.14 N 9.21 E';
-  const strip = p.recent.slice(-30);
-  const stripWidth = strip.length * 6;
-  const room = SVG_WIDTH - PAD * 2 - stripWidth - 24;
-  const titleScale = textWidth(e.title) * big <= room ? big : small;
-  const title = wrapText(e.title, Math.floor(room / titleScale), 1)[0] ?? '';
-  const line1 = top + 22;
-  const line2 = top + 50;
-  const bars: string[] = [];
-  const baseY = line2 + GLYPH_HEIGHT * big;
-  strip.forEach((day, i) => {
-    const x = SVG_WIDTH - PAD - stripWidth + i * 6;
-    if (!day) return;
-    const color = CONDITION_COLOR[day.condition];
-    const h =
-      day.condition === 'rain' || day.condition === 'storm'
-        ? 4 + Math.min(24, day.rain * 1.6)
-        : day.condition === 'cloudy'
-          ? 3
-          : 6;
-    bars.push(`<rect x="${x}" y="${f(baseY - h)}" width="4" height="${f(h)}" fill="${color}"/>`);
-  });
-  return [
-    `<rect x="0" y="${top}" width="${SVG_WIDTH}" height="${CAPTION_HEIGHT}" fill="${CAPTION.bg}"/>`,
-    `<rect x="0" y="${top}" width="${SVG_WIDTH}" height="4" fill="${accent}"/>`,
-    `<path transform="translate(${PAD} ${line1}) scale(${small})" fill="${CAPTION.dim}" d="${textPath(left)}"/>`,
-    `<path transform="translate(${SVG_WIDTH - PAD - textWidth(right) * small} ${line1}) scale(${small})" fill="${CAPTION.dim}" d="${textPath(right)}"/>`,
-    `<path transform="translate(${PAD} ${line2 + (titleScale === big ? 0 : 4)}) scale(${titleScale})" fill="${CAPTION.text}" d="${textPath(title)}"/>`,
-    bars.join(''),
-  ].join('');
-}
-
 const STYLE = [
   '@keyframes sw{0%,100%{transform:rotate(-.7deg)}50%{transform:rotate(.7deg)}}',
   '@keyframes sf{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}',
@@ -541,3 +216,5 @@ export function gardenPicture(world: World, gardens?: readonly Garden[], i = wor
   const expected = rainy + Math.max(0, 21 - lastWeeks.length) * 0.25;
   return { name: world.name.toUpperCase(), garden, entry, recent, lush: Math.min(1, 0.25 + expected / 8) };
 }
+
+export { CAPTION_HEIGHT, cellView, groundY, SCENE_HEIGHT, SVG_WIDTH, UNIT, type GardenPicture, type GardenSvgOptions };

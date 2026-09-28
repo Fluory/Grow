@@ -1,0 +1,25 @@
+Nature takes its turn before the gardener does. The **weather engine** is a small, pure function: it takes yesterday's weather and the garden, and returns the next garden plus a few sentences about what happened. It is deterministic – replaying the log always produces exactly the garden in `world.json`, and `npm run world:check` proves it on every pull request.
+
+## Six conditions, checked in order
+
+Open-Meteo reports daily values: rain, snow, sunshine hours, the night minimum, gusts. The engine reduces them to one condition – the first rule that matches wins:
+
+<ConditionTable />
+
+In the year before the garden was planted, Heilbronn had 162 sunny days, 89 rain days, 53 nights of frost, 16 snow days and 12 storms. That mix is what the simulated year on the home page grew under.
+
+## The stream widens, the sand banks grow
+
+The stream runs through a trough near the east end of the garden. Its level goes from 0 (a dry bed) to 8 (brimming): rain raises it, sun lowers it. Because the trough is curved, a higher level is also a *wider* stream – and when the water sinks, sand banks appear on both sides. Frost freezes it; the ice melts on the first day above 5 °C.
+
+## Storms and the paper boat
+
+A storm blows away every blossom and every apple. If a tree is grown enough (45 % of its full size), the tallest one falls – at most one every 60 days. The fallen log stays in the garden: mushrooms can grow near it, and the gardener can build a **bridge** from it. No tree to fell? Then the storm strands a paper boat on the sand bank, and the next heavy rain carries it away.
+
+<GardenFigure simulatedDay={330} />
+
+## The plants and their rules
+
+Every plant has planting months, a growing season, a place it likes and neighbours it needs – or avoids. Lavender needs full sun, ferns need shade, mushrooms need wood. All of it is enforced in code, and [RULES.md](https://github.com/Fluory/Grow/blob/main/RULES.md) is generated from the same tables:
+
+<SpeciesTable />

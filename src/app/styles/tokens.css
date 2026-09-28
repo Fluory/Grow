@@ -1,0 +1,189 @@
+/* =============================================================================
+   Grow – design system
+   Tokens → reset → type → surfaces (glass) → controls → motion → utilities.
+   Day is the default theme; [data-theme='night'] lights the garden lanterns.
+   ============================================================================= */
+
+:root {
+  --font-display: var(--font-instrument), 'Iowan Old Style', Georgia, serif;
+  --font-body: var(--font-figtree), system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-pixel: var(--font-silkscreen), ui-monospace, monospace;
+  --font-mono: var(--font-jetbrains), ui-monospace, 'SFMono-Regular', monospace;
+
+  /* palette – garden (names shared with the sister islands) */
+  --sea-0: #2f6f96;
+  --sea-1: #4f8fb8;
+  --sea-2: #6fb0d6;
+  --sea-3: #bfe3f2;
+  --foam: #eef7f2;
+  --sand: #e2cf9b;
+  --sand-deep: #cbb37b;
+  --grass: #79ad48;
+  --leaf: #3f7630;
+  --coral: #d9643a;
+  --coral-deep: #b84a26;
+  --sun: #f4c430;
+  --roof: #b5412f;
+  --soil: #5b4331;
+  --rain: #4f8fb8;
+  --frost: #9fd6ef;
+  --storm: #e0673c;
+  --blossom: #f7dbe3;
+  --lavender: #8a6bc2;
+
+  /* theme – day */
+  --sky-top: #cfe6ef;
+  --sky-mid: #e6f0e8;
+  --sky-low: #f3efe2;
+  --ink: #17261c;
+  --ink-soft: #3d5243;
+  --ink-faint: #6b7d6f;
+  --paper: #f7f3e8;
+  --paper-2: #ece6d4;
+  --line: rgb(23 38 28 / 0.12);
+  --accent: var(--coral);
+  --accent-ink: #4a1606;
+  --on-accent: #fff9f0;
+  --glass: rgb(247 243 232 / 0.62);
+  --glass-strong: rgb(247 243 232 / 0.88);
+  --glass-edge: rgb(255 255 255 / 0.75);
+  --glass-shade: rgb(23 38 28 / 0.08);
+  --shadow-soft: 0 1px 0 rgb(255 255 255 / 0.6) inset, 0 24px 60px -28px rgb(23 38 28 / 0.45);
+  --shadow-lift: 0 1px 0 rgb(255 255 255 / 0.7) inset, 0 34px 80px -30px rgb(23 38 28 / 0.55);
+  --grain-opacity: 0.08;
+  --grain-blend: multiply;
+  --glow: color-mix(in oklab, var(--sun) 28%, transparent);
+  --focus: #1f6fd6;
+
+  /* spacing (4px base) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 144px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --measure: 62ch;
+  --wide: 1240px;
+
+  /* radii */
+  --r-s: 10px;
+  --r-m: 18px;
+  --r-l: 28px;
+  --r-xl: 40px;
+  --r-pill: 999px;
+
+  /* fluid type scale (min 360px → max 1440px) */
+  --step--1: clamp(0.83rem, 0.8rem + 0.13vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.19vw, 1.13rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.37vw, 1.45rem);
+  --step-2: clamp(1.44rem, 1.3rem + 0.65vw, 1.88rem);
+  --step-3: clamp(1.73rem, 1.49rem + 1.07vw, 2.45rem);
+  --step-4: clamp(2.07rem, 1.68rem + 1.72vw, 3.2rem);
+  --step-5: clamp(2.49rem, 1.87rem + 2.73vw, 4.4rem);
+  --step-6: clamp(3rem, 1.9rem + 5vw, 7.4rem);
+  --step-7: clamp(3.6rem, 1.6rem + 8.8vw, 11rem);
+
+  /* motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-1: 160ms;
+  --dur-2: 280ms;
+  --dur-3: 520ms;
+  --dur-4: 900ms;
+
+  color-scheme: light;
+}
+
+[data-theme='night'] {
+  --sky-top: #070d0a;
+  --sky-mid: #0f1d16;
+  --sky-low: #13241b;
+  --ink: #eef0e4;
+  --ink-soft: #c3cfc3;
+  --ink-faint: #8fa391;
+  --paper: #0f1a14;
+  --paper-2: #16261d;
+  --line: rgb(238 240 228 / 0.14);
+  --accent: #f4c430;
+  --accent-ink: #2a2004;
+  --on-accent: #1d1602;
+  --glass: rgb(14 25 19 / 0.58);
+  --glass-strong: rgb(14 25 19 / 0.86);
+  --glass-edge: rgb(255 255 255 / 0.12);
+  --glass-shade: rgb(0 0 0 / 0.3);
+  --shadow-soft: 0 1px 0 rgb(255 255 255 / 0.06) inset, 0 24px 60px -24px rgb(0 0 0 / 0.7);
+  --shadow-lift: 0 1px 0 rgb(255 255 255 / 0.08) inset, 0 34px 80px -26px rgb(0 0 0 / 0.8);
+  --grain-opacity: 0.09;
+  --grain-blend: screen;
+  --glow: rgb(244 196 48 / 0.12);
+  --focus: #8ab8ff;
+  color-scheme: dark;
+}
+
+/* The sky behind the transparent 3D canvas follows the weather the scene shows.
+   Registered properties let the gradient colours transition smoothly. */
+@property --sky-top {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #cfe6ef;
+}
+@property --sky-mid {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #e6f0e8;
+}
+@property --sky-low {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #f3efe2;
+}
+
+:root {
+  transition:
+    --sky-top 1.4s var(--ease-in-out),
+    --sky-mid 1.4s var(--ease-in-out),
+    --sky-low 1.4s var(--ease-in-out);
+}
+
+:root:not([data-theme='night'])[data-weather='sun'] {
+  --sky-top: #b9dcef;
+  --sky-mid: #e3f0ea;
+  --sky-low: #f6efd9;
+}
+:root:not([data-theme='night'])[data-weather='cloudy'] {
+  --sky-top: #c6cfd5;
+  --sky-mid: #dfe4e5;
+  --sky-low: #eeede5;
+}
+:root:not([data-theme='night'])[data-weather='rain'] {
+  --sky-top: #aebac4;
+  --sky-mid: #cfd6da;
+  --sky-low: #e4e6df;
+}
+:root:not([data-theme='night'])[data-weather='storm'] {
+  --sky-top: #8f9ba6;
+  --sky-mid: #b9c1c6;
+  --sky-low: #d8dad2;
+}
+:root:not([data-theme='night'])[data-weather='snow'] {
+  --sky-top: #dce4ea;
+  --sky-mid: #eef2f4;
+  --sky-low: #f7f6f1;
+}
+:root:not([data-theme='night'])[data-weather='frost'] {
+  --sky-top: #c9e1f0;
+  --sky-mid: #e7f1f6;
+  --sky-low: #f4f3ec;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    transition: none;
+  }
+}

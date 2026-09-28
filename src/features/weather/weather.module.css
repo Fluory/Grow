@@ -1,0 +1,329 @@
+/* Chart roles – validated with the dataviz validator against the paper and night surfaces. */
+.charts,
+.calendar,
+.tiles,
+.tableView {
+  --viz-rain: #2a78d6;
+  --viz-temp: #eb6834;
+  --viz-grid: color-mix(in oklab, var(--ink) 11%, transparent);
+  --viz-base: color-mix(in oklab, var(--ink) 30%, transparent);
+  --viz-freeze: #5598e7;
+  --viz-bin0: color-mix(in oklab, var(--ink) 9%, transparent);
+  --viz-bin1: #6da7ec;
+  --viz-bin2: #3987e5;
+  --viz-bin3: #256abf;
+  --viz-bin4: #104281;
+}
+
+:global([data-theme='night']) .charts,
+:global([data-theme='night']) .calendar,
+:global([data-theme='night']) .tiles,
+:global([data-theme='night']) .tableView {
+  --viz-rain: #3987e5;
+  --viz-temp: #d95926;
+  --viz-freeze: #6da7ec;
+  --viz-bin0: color-mix(in oklab, var(--ink) 10%, transparent);
+  --viz-bin1: #184f95;
+  --viz-bin2: #2a78d6;
+  --viz-bin3: #6da7ec;
+  --viz-bin4: #b7d3f6;
+}
+
+/* ---------------------------------------------------------------- calendar */
+.calendar {
+  margin: 0;
+}
+
+.calendarScroll {
+  overflow-x: auto;
+  padding-bottom: var(--s-2);
+  scrollbar-width: thin;
+}
+
+.calendarSvg {
+  display: block;
+  max-width: none;
+  outline-offset: 4px;
+  border-radius: var(--r-s);
+}
+
+.calendarSvg rect[data-active] {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.bin0 {
+  fill: var(--viz-bin0);
+  background: var(--viz-bin0);
+}
+.bin1 {
+  fill: var(--viz-bin1);
+  background: var(--viz-bin1);
+}
+.bin2 {
+  fill: var(--viz-bin2);
+  background: var(--viz-bin2);
+}
+.bin3 {
+  fill: var(--viz-bin3);
+  background: var(--viz-bin3);
+}
+.bin4 {
+  fill: var(--viz-bin4);
+  background: var(--viz-bin4);
+}
+
+.calendarFoot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3) var(--s-5);
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--s-2);
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend span {
+  margin: 0 4px;
+}
+
+.readout {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 24px;
+}
+
+.readout strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------- charts */
+.charts {
+  position: relative;
+  outline-offset: 6px;
+  border-radius: var(--r-m);
+}
+
+.chartTitle {
+  margin: var(--s-4) 0 var(--s-1);
+  font-size: var(--step--1);
+  font-weight: 650;
+  color: var(--ink-soft);
+}
+
+.chartSvg {
+  display: block;
+  overflow: visible;
+}
+
+.grid {
+  stroke: var(--viz-grid);
+  stroke-width: 1;
+}
+
+.baseline {
+  stroke: var(--viz-base);
+  stroke-width: 1;
+}
+
+.freezing {
+  stroke: var(--viz-freeze);
+  stroke-width: 1;
+}
+
+.axisText {
+  fill: var(--ink-faint);
+  font-size: 11px;
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+}
+
+.valueText {
+  fill: var(--ink);
+  font-size: 12px;
+  font-weight: 650;
+  font-family: var(--font-body);
+}
+
+.rainBar {
+  fill: var(--viz-rain);
+  transition: opacity var(--dur-1);
+}
+
+.tempBar {
+  fill: var(--viz-temp);
+  transition: opacity var(--dur-1);
+}
+
+.charts:has([data-active]) .rainBar:not([data-active]),
+.charts:has([data-active]) .tempBar:not([data-active]) {
+  opacity: 0.55;
+}
+
+.crosshair {
+  stroke: var(--ink);
+  stroke-width: 1;
+  opacity: 0.45;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 3;
+  width: 208px;
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--r-m);
+  pointer-events: none;
+  font-size: var(--step--1);
+}
+
+.tipHead {
+  color: var(--ink-soft);
+  margin-bottom: var(--s-1);
+}
+
+.tipRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.tipRow strong {
+  font-weight: 700;
+}
+
+.keyRain,
+.keyTemp {
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--viz-rain);
+}
+
+.keyTemp {
+  background: var(--viz-temp);
+}
+
+.tipConditions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px var(--s-3);
+  margin-top: var(--s-2);
+  color: var(--ink-soft);
+}
+
+.tipConditions span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ---------------------------------------------------------------- stat tiles */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--s-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tile {
+  display: grid;
+  gap: 2px;
+  padding: var(--s-4) var(--s-4) var(--s-4);
+  border-radius: var(--r-m);
+}
+
+.tileLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.tileValue {
+  font-family: var(--font-body);
+  font-size: var(--step-3);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.tileNote {
+  font-size: var(--step--1);
+  color: var(--ink-faint);
+}
+
+/* ---------------------------------------------------------------- table */
+.tableView {
+  margin-top: var(--s-5);
+}
+
+.tableView summary {
+  cursor: pointer;
+  font-weight: 650;
+  color: var(--ink-soft);
+}
+
+.tableScroll {
+  max-height: 420px;
+  overflow: auto;
+  margin-top: var(--s-3);
+  border-radius: var(--r-m);
+  border: 1px solid var(--line);
+}
+
+.tableView table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--step--1);
+  font-variant-numeric: tabular-nums;
+}
+
+.tableView th,
+.tableView td {
+  padding: 6px 12px;
+  text-align: right;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--line);
+}
+
+.tableView th:first-child,
+.tableView td:nth-child(2) {
+  text-align: left;
+}
+
+.tableView thead th {
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  font-weight: 650;
+}
+
+.tableView tbody th {
+  font-weight: 500;
+}
+
+.cond {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

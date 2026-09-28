@@ -92,6 +92,7 @@ export {
   type Life,
   type SpeciesInfo,
 } from './species';
+export { simulate } from './simulate';
 export { gardenStats, type GardenStats } from './stats';
 export { footprint, STRUCTURE_LIST, STRUCTURES, type StructureInfo } from './structures';
 export {
