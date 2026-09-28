@@ -1,0 +1,30 @@
+.teaser {
+  display: grid;
+  gap: var(--s-6);
+}
+
+.frame {
+  display: block;
+  padding: var(--s-3);
+  border-radius: var(--r-l);
+  transition:
+    transform var(--dur-3) var(--ease-out),
+    box-shadow var(--dur-3) var(--ease-out);
+}
+
+.frame:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift);
+}
+
+.picture {
+  overflow: hidden;
+  border-radius: calc(var(--r-l) - var(--s-2));
+  line-height: 0;
+}
+
+.picture :global(svg) {
+  display: block;
+  width: 100%;
+  height: auto;
+}

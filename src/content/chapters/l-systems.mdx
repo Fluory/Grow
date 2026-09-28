@@ -1,0 +1,35 @@
+The plants in this garden are not drawn. They are *derived* – from small grammars called **Lindenmayer systems**, invented in 1968 by the biologist Aristid Lindenmayer to describe how algae and plants grow.
+
+## A string that rewrites itself
+
+An L-system starts with a short string, the *axiom*, and a set of rewriting rules. `F` means "draw a branch segment", `[` and `]` save and restore the position of a small turtle, `+`, `&` and `/` turn it in three dimensions, `L` places a leaf cluster. And `A` is an *apex* – a growing tip that the rules replace in every generation.
+
+Here is the oak of this garden after zero, one and two rewrites:
+
+<Derivation species="oak" />
+
+Every `A` became a fork with two or three new branches, each ending in a new `A`. The string grows exponentially – after five rewrites the oak has several hundred segments.
+
+## Stochastic, so no two trees are alike
+
+The rules are *stochastic*: an apex forks into two branches in some cases and three in others, and every angle is jittered a little. The random numbers come from a seed derived from the plant's id, so the same plant always grows into the same tree – on every computer, in the SVG and in 3D – while two oaks never look the same.
+
+## Growth levels: a new ring of branches per rain day
+
+The trick that makes the garden *grow* is that every module remembers the generation it was born in. Because only apices are rewritten, generation *n + 1* always contains generation *n*. So a plant can be shown at any **level** between zero and its last generation: segments born up to that level are visible, the newest ones grow in from the tip they sprang from, and the leaf tuft at the old tip shrinks away.
+
+A plant's level comes from its stage – and its stage comes from the weather:
+
+<GrowthStrip species="oak" />
+
+This is literally what the brief asked for: plants that become *more complex* with every rain day, not just bigger.
+
+<GrowthStrip species="birch" steps={[0.1, 0.3, 0.55, 0.8, 1]} />
+
+## One skeleton, two pictures
+
+The turtle works in 3D. The README picture is simply the front view of the skeleton; the website builds tapered tubes from the very same segments, sorted by the level they were born in, so a growth level is just a draw range on the GPU. The SVG and the 3D garden can never disagree about a single branch.
+
+<Callout icon="🌿">
+  Herbs are different: a sunflower does not branch, it gets taller. Flowers, reeds and lavender keep their shape and grow in size; ferns unroll frond by frond.
+</Callout>

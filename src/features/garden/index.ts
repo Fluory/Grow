@@ -1,0 +1,127 @@
+/** Public interface of the garden engine – other modules import only from here. */
+export {
+  applyDay,
+  choiceOf,
+  createGenesis,
+  emptyGarden,
+  GENESIS_LORE,
+  GENESIS_TITLE,
+  replay,
+  timeline,
+  WorldRuleError,
+  type DayInput,
+  type DayResult,
+} from './apply';
+export {
+  addDays,
+  berlinDate,
+  daysBetween,
+  formatDate,
+  formatMonth,
+  isIsoDate,
+  monthOf,
+  seasonOf,
+  TIME_ZONE,
+  type Season,
+} from './calendar';
+export { recommend, TARGETS, type Suggestion } from './director';
+export { applyWeather, canGrow, FALL_COOLDOWN, FALL_FROM, listPlants } from './effects';
+export {
+  distance,
+  growth,
+  isAlive,
+  isTree,
+  occupant,
+  plantById,
+  zoneAt,
+  type Cell,
+  type Garden,
+  type Stats,
+} from './garden';
+export { validateWorld } from './history';
+export { autoLore, autoTitle, checkText, describePlace } from './lore';
+export { createRng, hashString, pick, type Rng } from './rng';
+export {
+  applyChoice,
+  checkChoice,
+  frozenGround,
+  harvestMinimum,
+  options,
+  spanCells,
+  STEPPING_MAX_WATER,
+  TREE_LIMIT,
+  UNLOCK,
+  type Choice,
+  type Options,
+} from './rules';
+export {
+  ACTIONS,
+  BUILDABLES,
+  CONDITIONS,
+  isBuildable,
+  isSpecies,
+  parseWorld,
+  PLACE,
+  ROW_NAMES,
+  ROWS,
+  SPECIES_IDS,
+  STRUCTURE_TYPES,
+  WeatherSchema,
+  WIDTH,
+  type Action,
+  type Buildable,
+  type Condition,
+  type DayEntry,
+  type Nature,
+  type Plant,
+  type SpeciesId,
+  type Structure,
+  type StructureType,
+  type Weather,
+  type World,
+} from './schema';
+export {
+  MONTH_NAMES,
+  monthRange,
+  NEEDS_TEXT,
+  SPECIES,
+  SPECIES_LIST,
+  speciesRule,
+  ZONE_TEXT,
+  type Kind,
+  type Life,
+  type SpeciesInfo,
+} from './species';
+export { simulate } from './simulate';
+export { gardenStats, type GardenStats } from './stats';
+export { footprint, STRUCTURE_LIST, STRUCTURES, type StructureInfo } from './structures';
+export {
+  CHANNEL,
+  columnHeight,
+  groundHeight,
+  HILL,
+  inGarden,
+  isChannel,
+  isWater,
+  MARGIN,
+  MAX_WATER,
+  waterDepth,
+  waterEdges,
+  waterHeight,
+  waterSpan,
+  zoneOf,
+  type Zone,
+} from './terrain';
+export {
+  classify,
+  CONDITION_INFO,
+  DAILY_VARIABLES,
+  describeWeather,
+  makeWeather,
+  openMeteoUrl,
+  parseOpenMeteo,
+  THRESHOLDS,
+  weatherLine,
+  type ConditionInfo,
+  type WeatherValues,
+} from './weather';

@@ -1,0 +1,91 @@
+.scene {
+  min-height: 92svh;
+  display: grid;
+  align-items: center;
+  padding-block: var(--s-8);
+}
+
+.row {
+  display: block;
+}
+
+.card {
+  width: min(460px, 100%);
+  margin-left: auto;
+  padding: var(--s-6);
+  display: grid;
+  gap: var(--s-3);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--r-m);
+  color: var(--ink);
+  background: color-mix(in oklab, var(--tone, var(--rain)) 22%, transparent);
+}
+
+.card[data-condition='sun'] {
+  --tone: var(--sun);
+}
+.card[data-condition='frost'] {
+  --tone: var(--frost);
+}
+.card[data-condition='storm'] {
+  --tone: var(--storm);
+}
+
+.motto {
+  font-family: var(--font-display);
+  font-size: var(--step-5);
+  font-style: italic;
+  line-height: 0.95;
+}
+
+.effect {
+  color: var(--ink-soft);
+}
+
+.threshold {
+  justify-self: start;
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.more {
+  max-width: var(--measure);
+  margin-top: var(--s-6);
+  padding: var(--s-4) var(--s-5);
+  border-radius: var(--r-m);
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .card {
+    margin-inline: auto;
+  }
+
+  .scene {
+    align-items: end;
+    min-height: 88svh;
+  }
+}
+
+.scenery {
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+  font-size: var(--step--1);
+  color: var(--ink-faint);
+}
+
+@media (max-width: 900px) {
+  .card {
+    background: var(--glass-strong);
+  }
+}

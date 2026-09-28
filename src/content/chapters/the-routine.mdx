@@ -1,0 +1,46 @@
+Every morning at **08:53** in Heilbronn, a Claude routine starts in the cloud. It has one job: record one day and make exactly one commit. This chapter follows it through a single morning.
+
+## 1 · Is today already done?
+
+```bash
+npm run day -- status
+```
+
+The first thing the routine does is check whether today already exists in the log. If the routine ran before – or a human ran it by hand – it stops without changing anything. That is what makes it safe to schedule: it is **idempotent**.
+
+## 2 · Ask the sky
+
+```bash
+npm run day -- weather
+```
+
+The CLI fetches yesterday's daily values for Heilbronn from Open-Meteo and caches them, so the plan and the final commit see exactly the same numbers. If the service is down after three attempts, the last recorded weather is repeated and marked as *repeated*. The garden never skips a day, and it never pretends.
+
+## 3 · Let nature act, then look at the choices
+
+```bash
+npm run day -- plan
+```
+
+The plan shows the weather, the sentences nature will write ("Rain, 6.4 mm: 12 plants grew one stage and the stream rose to level 5."), the garden as it will be afterwards, and every legal choice – which plants may be sown where, which structures are unlocked, which plants could use water, what is ripe. The routine reads it like a gardener reads the morning.
+
+## 4 · One choice, one line of lore
+
+```bash
+npm run day -- apply --action plant --species oak --x 20 --row 1 \
+  --lore "Planted where the old path used to bend."
+```
+
+Claude picks what makes the best story and writes one line of lore. The code checks the choice against every rule – an illegal choice exits with code 2 and the routine picks again. After two failures it lets the rule-based director decide (`npm run day -- auto`).
+
+## 5 · Exactly one commit
+
+`npm run verify` runs the same checks as continuous integration. Then the routine commits `world/world.json`, `world/garden.svg` and `LOGBOOK.md` in **one** commit, titled with the day and the weather, and opens a pull request. When CI is green, a GitHub Actions job squash-merges it into `main` – exactly one commit per day, and the pull request guard of the development system stays intact.
+
+<Callout icon="🔒">
+  The merge job is strict: it only merges a same-repository pull request from a `claude/` branch, titled `Day N: …`, with exactly one commit that touches only the three world files – and only after every check passed.
+</Callout>
+
+## 6 · The website grows too
+
+The merge redeploys this website on Vercel. The garden you see in 3D, the picture in the README and the day pages are all rendered from that one commit. Tomorrow at 08:53, it starts again.
