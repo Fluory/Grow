@@ -5,10 +5,10 @@
   "place": {"name":"Heilbronn","lat":49.1427,"lon":9.2109},
   "width": 64,
   "rows": 3,
-  "nature": {"water":2,"ice":false,"snow":0},
+  "nature": {"water":3,"ice":false,"snow":0},
   "plants": [
     {"id":"p1","species":"lavender","x":8,"row":0,"day":1,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":3,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":4,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p3","species":"tulip","x":29,"row":1,"day":4,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
   ],
   "structures": [],
@@ -17,6 +17,7 @@
     {"day":1,"date":"2026-09-29","action":"plant","species":"lavender","target":"p1","x":8,"row":0,"title":"A young lavender on the little hill at the back","lore":"On a hot late-September afternoon the first seedling goes in: a sprig of lavender on the little hill, where the sun lingers longest.","source":"claude","weather":{"date":"2026-09-28","condition":"sun","code":3,"tmax":30,"tmin":14.6,"rain":0,"snow":0,"sun":10.9,"wind":6,"gust":15.1}},
     {"day":2,"date":"2026-09-30","action":"water","target":"p1","title":"Watering the young lavender","lore":"The stream shrinks to a thread in the warm afternoon, so the gardener carries a can up the little hill for the thirsty lavender.","source":"claude","weather":{"date":"2026-09-29","condition":"sun","code":3,"tmax":28.2,"tmin":13,"rain":0,"snow":0,"sun":8.7,"wind":10.1,"gust":22.3}},
     {"day":3,"date":"2026-10-01","action":"plant","species":"oak","target":"p2","x":26,"row":0,"title":"An oak sapling in the middle of the garden at the back","lore":"October begins with the stream bed dry and warm, and an acorn goes into the ground at the back of the meadow to wait for rain.","source":"claude","weather":{"date":"2026-09-30","condition":"sun","code":3,"tmax":29.6,"tmin":13.2,"rain":0,"snow":0,"sun":10.4,"wind":8.5,"gust":18.7}},
-    {"day":4,"date":"2026-10-02","action":"plant","species":"tulip","target":"p3","x":29,"row":1,"title":"Tulip bulbs in the middle of the garden","lore":"The first rain in days softens the dry meadow, and a tulip bulb is tucked into the damp earth to sleep until spring.","source":"claude","weather":{"date":"2026-10-01","condition":"rain","code":61,"tmax":20.3,"tmin":15,"rain":10.4,"snow":0,"sun":0,"wind":10.4,"gust":23.8}}
+    {"day":4,"date":"2026-10-02","action":"plant","species":"tulip","target":"p3","x":29,"row":1,"title":"Tulip bulbs in the middle of the garden","lore":"The first rain in days softens the dry meadow, and a tulip bulb is tucked into the damp earth to sleep until spring.","source":"claude","weather":{"date":"2026-10-01","condition":"rain","code":61,"tmax":20.3,"tmin":15,"rain":10.4,"snow":0,"sun":0,"wind":10.4,"gust":23.8}},
+    {"day":5,"date":"2026-10-03","action":"rest","title":"Listening to the rain","lore":"A quick shower and a long golden afternoon do the work today, and the gardener just sits on the warm grass and listens to the stream filling again.","source":"claude","weather":{"date":"2026-10-02","condition":"rain","code":80,"tmax":21.5,"tmin":14.8,"rain":4,"snow":0,"sun":9.8,"wind":9,"gust":22}}
   ]
 }
