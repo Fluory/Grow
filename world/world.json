@@ -5,14 +5,16 @@
   "place": {"name":"Heilbronn","lat":49.1427,"lon":9.2109},
   "width": 64,
   "rows": 3,
-  "nature": {"water":2,"ice":false,"snow":0},
+  "nature": {"water":1,"ice":false,"snow":0},
   "plants": [
     {"id":"p1","species":"lavender","x":8,"row":0,"day":1,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":4,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p3","species":"tulip","x":29,"row":1,"day":4,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
   ],
-  "structures": [],
+  "structures": [
+    {"id":"s1","type":"beehive","x":11,"row":2,"day":7}
+  ],
   "days": [
     {"day":0,"date":"2026-09-28","action":"genesis","title":"An empty garden bed by a stream","lore":"Dark soil, a trickle of water and one question: what will the weather in Heilbronn make of it?","source":"genesis"},
     {"day":1,"date":"2026-09-29","action":"plant","species":"lavender","target":"p1","x":8,"row":0,"title":"A young lavender on the little hill at the back","lore":"On a hot late-September afternoon the first seedling goes in: a sprig of lavender on the little hill, where the sun lingers longest.","source":"claude","weather":{"date":"2026-09-28","condition":"sun","code":3,"tmax":30,"tmin":14.6,"rain":0,"snow":0,"sun":10.9,"wind":6,"gust":15.1}},
@@ -20,6 +22,7 @@
     {"day":3,"date":"2026-10-01","action":"plant","species":"oak","target":"p2","x":26,"row":0,"title":"An oak sapling in the middle of the garden at the back","lore":"October begins with the stream bed dry and warm, and an acorn goes into the ground at the back of the meadow to wait for rain.","source":"claude","weather":{"date":"2026-09-30","condition":"sun","code":3,"tmax":29.6,"tmin":13.2,"rain":0,"snow":0,"sun":10.4,"wind":8.5,"gust":18.7}},
     {"day":4,"date":"2026-10-02","action":"plant","species":"tulip","target":"p3","x":29,"row":1,"title":"Tulip bulbs in the middle of the garden","lore":"The first rain in days softens the dry meadow, and a tulip bulb is tucked into the damp earth to sleep until spring.","source":"claude","weather":{"date":"2026-10-01","condition":"rain","code":61,"tmax":20.3,"tmin":15,"rain":10.4,"snow":0,"sun":0,"wind":10.4,"gust":23.8}},
     {"day":5,"date":"2026-10-03","action":"rest","title":"Listening to the rain","lore":"A quick shower and a long golden afternoon do the work today, and the gardener just sits on the warm grass and listens to the stream filling again.","source":"claude","weather":{"date":"2026-10-02","condition":"rain","code":80,"tmax":21.5,"tmin":14.8,"rain":4,"snow":0,"sun":9.8,"wind":9,"gust":22}},
-    {"day":6,"date":"2026-10-04","action":"plant","species":"apple","target":"p4","x":59,"row":2,"title":"An apple tree sapling on the far side of the stream at the front","lore":"Morning mist lifts into a mild golden day, and across the stream a little apple tree is set in the ground, a promise of blossom for some far-off spring.","source":"claude","weather":{"date":"2026-10-03","condition":"sun","code":45,"tmax":21.9,"tmin":11.9,"rain":0,"snow":0,"sun":8.4,"wind":9.1,"gust":19.4}}
+    {"day":6,"date":"2026-10-04","action":"plant","species":"apple","target":"p4","x":59,"row":2,"title":"An apple tree sapling on the far side of the stream at the front","lore":"Morning mist lifts into a mild golden day, and across the stream a little apple tree is set in the ground, a promise of blossom for some far-off spring.","source":"claude","weather":{"date":"2026-10-03","condition":"sun","code":45,"tmax":21.9,"tmin":11.9,"rain":0,"snow":0,"sun":8.4,"wind":9.1,"gust":19.4}},
+    {"day":7,"date":"2026-10-05","action":"build","structure":"beehive","target":"s1","x":11,"row":2,"title":"A beehive on the little hill at the front","lore":"On a warm, bright October day a beehive is set on the little hill near the lavender, ready for the bees of spring.","source":"claude","weather":{"date":"2026-10-04","condition":"sun","code":61,"tmax":22.8,"tmin":10.6,"rain":0,"snow":0,"sun":9.3,"wind":7.6,"gust":16.9}}
   ]
 }
