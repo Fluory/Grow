@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 6** · 4 living plants (2 trees) · 0 things built · 2 rain days, 14.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 7** · 4 living plants (2 trees) · 1 things built · 2 rain days, 14.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## October 2026
 
+- **Day 7** · 5 Oct · ☀️ 9.3 h · 🔨 **A beehive on the little hill at the front** — On a warm, bright October day a beehive is set on the little hill near the lavender, ready for the bees of spring.
+  <br><sub>Sun, 9.3 h: the stream sank to level 1 and the sand bank grew.</sub>
 - **Day 6** · 4 Oct · ☀️ 8.4 h · 🌳 **An apple tree sapling on the far side of the stream at the front** — Morning mist lifts into a mild golden day, and across the stream a little apple tree is set in the ground, a promise of blossom for some far-off spring.
   <br><sub>Sun, 8.4 h: the stream sank to level 2 and the sand bank grew.</sub>
 - **Day 5** · 3 Oct · 🌧️ 4.0 mm · 🪑 **Listening to the rain** — A quick shower and a long golden afternoon do the work today, and the gardener just sits on the warm grass and listens to the stream filling again.
