@@ -10,7 +10,8 @@
     {"id":"p1","species":"lavender","x":8,"row":0,"day":1,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":4,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p3","species":"tulip","x":29,"row":1,"day":4,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":2,"bloom":0,"fruit":0,"status":"growing"}
+    {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p5","species":"tulip","x":30,"row":1,"day":9,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
   ],
   "structures": [
     {"id":"s1","type":"beehive","x":11,"row":2,"day":7}
@@ -24,6 +25,7 @@
     {"day":5,"date":"2026-10-03","action":"rest","title":"Listening to the rain","lore":"A quick shower and a long golden afternoon do the work today, and the gardener just sits on the warm grass and listens to the stream filling again.","source":"claude","weather":{"date":"2026-10-02","condition":"rain","code":80,"tmax":21.5,"tmin":14.8,"rain":4,"snow":0,"sun":9.8,"wind":9,"gust":22}},
     {"day":6,"date":"2026-10-04","action":"plant","species":"apple","target":"p4","x":59,"row":2,"title":"An apple tree sapling on the far side of the stream at the front","lore":"Morning mist lifts into a mild golden day, and across the stream a little apple tree is set in the ground, a promise of blossom for some far-off spring.","source":"claude","weather":{"date":"2026-10-03","condition":"sun","code":45,"tmax":21.9,"tmin":11.9,"rain":0,"snow":0,"sun":8.4,"wind":9.1,"gust":19.4}},
     {"day":7,"date":"2026-10-05","action":"build","structure":"beehive","target":"s1","x":11,"row":2,"title":"A beehive on the little hill at the front","lore":"On a warm, bright October day a beehive is set on the little hill near the lavender, ready for the bees of spring.","source":"claude","weather":{"date":"2026-10-04","condition":"sun","code":61,"tmax":22.8,"tmin":10.6,"rain":0,"snow":0,"sun":9.3,"wind":7.6,"gust":16.9}},
-    {"day":8,"date":"2026-10-06","action":"water","target":"p4","title":"Watering the young apple tree","lore":"With the stream bed dry once more, the gardener carries water across the empty channel to the young apple tree on the far side.","source":"claude","weather":{"date":"2026-10-05","condition":"sun","code":45,"tmax":22.9,"tmin":9.1,"rain":0,"snow":0,"sun":8.5,"wind":3.8,"gust":13}}
+    {"day":8,"date":"2026-10-06","action":"water","target":"p4","title":"Watering the young apple tree","lore":"With the stream bed dry once more, the gardener carries water across the empty channel to the young apple tree on the far side.","source":"claude","weather":{"date":"2026-10-05","condition":"sun","code":45,"tmax":22.9,"tmin":9.1,"rain":0,"snow":0,"sun":8.5,"wind":3.8,"gust":13}},
+    {"day":9,"date":"2026-10-07","action":"plant","species":"tulip","target":"p5","x":30,"row":1,"title":"Tulip bulbs in the middle of the garden","lore":"Under a warm, hazy October sky a second tulip bulb goes in beside the first, and the middle of the garden begins to look like a flower bed.","source":"claude","weather":{"date":"2026-10-06","condition":"sun","code":45,"tmax":24.1,"tmin":8.5,"rain":0,"snow":0,"sun":8.8,"wind":4.3,"gust":10.1}}
   ]
 }

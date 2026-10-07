@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 8** · 4 living plants (2 trees) · 1 things built · 2 rain days, 14.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 9** · 5 living plants (2 trees) · 1 things built · 2 rain days, 14.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## October 2026
 
+- **Day 9** · 7 Oct · ☀️ 8.8 h · 🌱 **Tulip bulbs in the middle of the garden** — Under a warm, hazy October sky a second tulip bulb goes in beside the first, and the middle of the garden begins to look like a flower bed.
+  <br><sub>Sun, 8.8 h: the stream bed lies dry.</sub>
 - **Day 8** · 6 Oct · ☀️ 8.5 h · 💧 **Watering the young apple tree** — With the stream bed dry once more, the gardener carries water across the empty channel to the young apple tree on the far side.
   <br><sub>Sun, 8.5 h: the stream bed lies dry.</sub>
 - **Day 7** · 5 Oct · ☀️ 9.3 h · 🔨 **A beehive on the little hill at the front** — On a warm, bright October day a beehive is set on the little hill near the lavender, ready for the bees of spring.
