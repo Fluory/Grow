@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 10** · 5 living plants (2 trees) · 1 things built · 2 rain days, 14.5 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 11** · 6 living plants (3 trees) · 1 things built · 3 rain days, 22.5 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## October 2026
 
+- **Day 11** · 9 Oct · 🌧️ 8.0 mm · 🌳 **A willow sapling on the west bank of the stream** — Grey rain and a gusty wind bring the trickle back to the stream, and a willow cutting is pressed into the soft west bank to drink from it.
+  <br><sub>Rain, 8.0 mm: 2 plants grew one stage and the stream rose to level 1.</sub>
 - **Day 10** · 8 Oct · ☀️ 10.1 h · 💧 **Watering the young oak** — The stream bed has lain dry for days, so the gardener tips a full can around the young oak and watches the dust turn dark.
   <br><sub>Sun, 10.1 h: the stream bed lies dry.</sub>
 - **Day 9** · 7 Oct · ☀️ 8.8 h · 🌱 **Tulip bulbs in the middle of the garden** — Under a warm, hazy October sky a second tulip bulb goes in beside the first, and the middle of the garden begins to look like a flower bed.
