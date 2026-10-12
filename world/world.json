@@ -16,7 +16,8 @@
     {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
   ],
   "structures": [
-    {"id":"s1","type":"beehive","x":11,"row":2,"day":7}
+    {"id":"s1","type":"beehive","x":11,"row":2,"day":7},
+    {"id":"s2","type":"stepping","x":44,"row":1,"day":14}
   ],
   "days": [
     {"day":0,"date":"2026-09-28","action":"genesis","title":"An empty garden bed by a stream","lore":"Dark soil, a trickle of water and one question: what will the weather in Heilbronn make of it?","source":"genesis"},
@@ -32,6 +33,7 @@
     {"day":10,"date":"2026-10-08","action":"water","target":"p2","title":"Watering the young oak","lore":"The stream bed has lain dry for days, so the gardener tips a full can around the young oak and watches the dust turn dark.","source":"claude","weather":{"date":"2026-10-07","condition":"sun","code":61,"tmax":24.7,"tmin":10.8,"rain":0.1,"snow":0,"sun":10.1,"wind":5,"gust":17.6}},
     {"day":11,"date":"2026-10-09","action":"plant","species":"willow","target":"p6","x":37,"row":1,"title":"A willow sapling on the west bank of the stream","lore":"Grey rain and a gusty wind bring the trickle back to the stream, and a willow cutting is pressed into the soft west bank to drink from it.","source":"claude","weather":{"date":"2026-10-08","condition":"rain","code":80,"tmax":17.5,"tmin":10.5,"rain":8,"snow":0,"sun":0,"wind":16.4,"gust":35.6}},
     {"day":12,"date":"2026-10-10","action":"water","target":"p6","title":"Watering the young willow","lore":"Under a low grey sky and a cold wind, the gardener settles the new willow cutting with a can of water so its roots take hold before winter.","source":"claude","weather":{"date":"2026-10-09","condition":"cloudy","code":61,"tmax":13.8,"tmin":5.2,"rain":0.3,"snow":0,"sun":1.7,"wind":15.6,"gust":34.9}},
-    {"day":13,"date":"2026-10-11","action":"plant","species":"pine","target":"p7","x":4,"row":0,"title":"A pine sapling on the little hill at the back","lore":"Between bright spells and brisk showers a little pine is set at the back of the hill, where one day it will stand dark green against the winter sky.","source":"claude","weather":{"date":"2026-10-10","condition":"rain","code":80,"tmax":16.2,"tmin":11,"rain":8,"snow":0,"sun":7.2,"wind":15.6,"gust":36.7}}
+    {"day":13,"date":"2026-10-11","action":"plant","species":"pine","target":"p7","x":4,"row":0,"title":"A pine sapling on the little hill at the back","lore":"Between bright spells and brisk showers a little pine is set at the back of the hill, where one day it will stand dark green against the winter sky.","source":"claude","weather":{"date":"2026-10-10","condition":"rain","code":80,"tmax":16.2,"tmin":11,"rain":8,"snow":0,"sun":7.2,"wind":15.6,"gust":36.7}},
+    {"day":14,"date":"2026-10-12","action":"build","structure":"stepping","target":"s2","x":44,"row":1,"title":"Stepping stones across the stream","lore":"On a grey, blustery day the gardener lays flat stones across the shallow stream, so the apple tree on the far side is only a few dry steps away.","source":"claude","weather":{"date":"2026-10-11","condition":"cloudy","code":80,"tmax":14.2,"tmin":9.7,"rain":0.8,"snow":0,"sun":2.2,"wind":15.3,"gust":38.9}}
   ]
 }
