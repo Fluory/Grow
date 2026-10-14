@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 15** · 7 living plants (4 trees) · 2 things built · 4 rain days, 31.6 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 16** · 8 living plants (4 trees) · 2 things built · 4 rain days, 31.7 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## October 2026
 
+- **Day 16** · 14 Oct · ☁️ 4°/16° · 🌱 **Tulip bulbs in the middle of the garden** — The nights are turning cold, so the gardener chooses a hardy tulip bulb and tucks it in beside the other two to wait out the winter.
+  <br><sub>Grey, 15.8 °C: a quiet day – nothing grew, nothing broke.</sub>
 - **Day 15** · 13 Oct · ☀️ 9.5 h · 💧 **Watering the young pine** — A clear, still October day after the morning mist, and the gardener climbs the little hill to give the young pine its first long drink.
   <br><sub>Sun, 9.5 h: the stream sank to level 1 and the sand bank grew.</sub>
 - **Day 14** · 12 Oct · ☁️ 10°/14° · 🔨 **Stepping stones across the stream** — On a grey, blustery day the gardener lays flat stones across the shallow stream, so the apple tree on the far side is only a few dry steps away.
