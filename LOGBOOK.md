@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 18** · 9 living plants (5 trees) · 3 things built · 5 rain days, 32.7 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 19** · 9 living plants (5 trees) · 3 things built · 5 rain days, 32.7 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## October 2026
 
+- **Day 19** · 17 Oct · ☀️ 8.3 h · 💧 **Watering the young willow** — The stream has slipped away in the mild October sun, so the gardener carries water over the dry stones to the new willow on the east bank.
+  <br><sub>Sun, 8.3 h: the stream bed lies dry.</sub>
 - **Day 18** · 16 Oct · ☀️ 6.6 h · 🌳 **A willow sapling on the east bank of the stream** — On a calm golden afternoon a second willow cutting goes into the east bank, so that one day two green crowns will lean toward each other across the stream.
   <br><sub>Sun, 6.6 h: the stream sank to level 1 and the sand bank grew.</sub>
 - **Day 17** · 15 Oct · 🌧️ 1.0 mm · 🔨 **A garden shed at the back** — With eight plants now in its care, the garden earns a little wooden shed at the back of the meadow, its door open to a mild, showery afternoon.
