@@ -5,7 +5,7 @@
   "place": {"name":"Heilbronn","lat":49.1427,"lon":9.2109},
   "width": 64,
   "rows": 3,
-  "nature": {"water":1,"ice":false,"snow":0},
+  "nature": {"water":0,"ice":false,"snow":0},
   "plants": [
     {"id":"p1","species":"lavender","x":8,"row":0,"day":1,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":8,"bloom":0,"fruit":0,"status":"growing"},
@@ -15,7 +15,7 @@
     {"id":"p6","species":"willow","x":37,"row":1,"day":11,"stage":4,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":3,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p8","species":"tulip","x":31,"row":1,"day":16,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
+    {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":2,"bloom":0,"fruit":0,"status":"growing"}
   ],
   "structures": [
     {"id":"s1","type":"beehive","x":11,"row":2,"day":7},
@@ -41,6 +41,7 @@
     {"day":15,"date":"2026-10-13","action":"water","target":"p7","title":"Watering the young pine","lore":"A clear, still October day after the morning mist, and the gardener climbs the little hill to give the young pine its first long drink.","source":"claude","weather":{"date":"2026-10-12","condition":"sun","code":45,"tmax":16.8,"tmin":5.3,"rain":0,"snow":0,"sun":9.5,"wind":4.2,"gust":9.7}},
     {"day":16,"date":"2026-10-14","action":"plant","species":"tulip","target":"p8","x":31,"row":1,"title":"Tulip bulbs in the middle of the garden","lore":"The nights are turning cold, so the gardener chooses a hardy tulip bulb and tucks it in beside the other two to wait out the winter.","source":"claude","weather":{"date":"2026-10-13","condition":"cloudy","code":61,"tmax":15.8,"tmin":3.9,"rain":0.1,"snow":0,"sun":0.1,"wind":6.6,"gust":16.2}},
     {"day":17,"date":"2026-10-15","action":"build","structure":"shed","target":"s3","x":20,"row":0,"title":"A garden shed at the back","lore":"With eight plants now in its care, the garden earns a little wooden shed at the back of the meadow, its door open to a mild, showery afternoon.","source":"claude","weather":{"date":"2026-10-14","condition":"rain","code":80,"tmax":19.2,"tmin":10,"rain":1,"snow":0,"sun":8,"wind":5.4,"gust":13.7}},
-    {"day":18,"date":"2026-10-16","action":"plant","species":"willow","target":"p9","x":50,"row":2,"title":"A willow sapling on the east bank of the stream","lore":"On a calm golden afternoon a second willow cutting goes into the east bank, so that one day two green crowns will lean toward each other across the stream.","source":"claude","weather":{"date":"2026-10-15","condition":"sun","code":45,"tmax":19.5,"tmin":5.7,"rain":0,"snow":0,"sun":6.6,"wind":3.4,"gust":8.3}}
+    {"day":18,"date":"2026-10-16","action":"plant","species":"willow","target":"p9","x":50,"row":2,"title":"A willow sapling on the east bank of the stream","lore":"On a calm golden afternoon a second willow cutting goes into the east bank, so that one day two green crowns will lean toward each other across the stream.","source":"claude","weather":{"date":"2026-10-15","condition":"sun","code":45,"tmax":19.5,"tmin":5.7,"rain":0,"snow":0,"sun":6.6,"wind":3.4,"gust":8.3}},
+    {"day":19,"date":"2026-10-17","action":"water","target":"p9","title":"Watering the young willow","lore":"The stream has slipped away in the mild October sun, so the gardener carries water over the dry stones to the new willow on the east bank.","source":"claude","weather":{"date":"2026-10-16","condition":"sun","code":45,"tmax":20.3,"tmin":6.9,"rain":0,"snow":0,"sun":8.3,"wind":4.6,"gust":9.7}}
   ]
 }
