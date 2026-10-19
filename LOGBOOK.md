@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 20** · 9 living plants (5 trees) · 4 things built · 6 rain days, 39.7 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 21** · 10 living plants (6 trees) · 4 things built · 7 rain days, 42.2 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## October 2026
 
+- **Day 21** · 19 Oct · 🌧️ 2.5 mm · 🌳 **An apple tree sapling on the little hill** — Soft rain on a cool grey day, and a second apple tree is planted on the slope of the little hill, so that one day the bees will have blossom on both sides of the stream.
+  <br><sub>Rain, 2.5 mm: 5 plants grew one stage and the stream rose to level 2.</sub>
 - **Day 20** · 18 Oct · 🌧️ 7.0 mm · 🔨 **A rain barrel by the shed** — A long grey day of steady rain, and the gardener sets a wooden barrel beside the shed to catch it for the next dry spell.
   <br><sub>Rain, 7.0 mm: 5 plants grew one stage and the stream rose to level 1.</sub>
 - **Day 19** · 17 Oct · ☀️ 8.3 h · 💧 **Watering the young willow** — The stream has slipped away in the mild October sun, so the gardener carries water over the dry stones to the new willow on the east bank.

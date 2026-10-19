@@ -5,17 +5,18 @@
   "place": {"name":"Heilbronn","lat":49.1427,"lon":9.2109},
   "width": 64,
   "rows": 3,
-  "nature": {"water":1,"ice":false,"snow":0},
+  "nature": {"water":2,"ice":false,"snow":0},
   "plants": [
     {"id":"p1","species":"lavender","x":8,"row":0,"day":1,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":9,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":10,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p3","species":"tulip","x":29,"row":1,"day":4,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":6,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":7,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p5","species":"tulip","x":30,"row":1,"day":9,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p6","species":"willow","x":37,"row":1,"day":11,"stage":5,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":4,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p6","species":"willow","x":37,"row":1,"day":11,"stage":6,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":5,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p8","species":"tulip","x":31,"row":1,"day":16,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":3,"bloom":0,"fruit":0,"status":"growing"}
+    {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":4,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p10","species":"apple","x":15,"row":1,"day":21,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
   ],
   "structures": [
     {"id":"s1","type":"beehive","x":11,"row":2,"day":7},
@@ -44,6 +45,7 @@
     {"day":17,"date":"2026-10-15","action":"build","structure":"shed","target":"s3","x":20,"row":0,"title":"A garden shed at the back","lore":"With eight plants now in its care, the garden earns a little wooden shed at the back of the meadow, its door open to a mild, showery afternoon.","source":"claude","weather":{"date":"2026-10-14","condition":"rain","code":80,"tmax":19.2,"tmin":10,"rain":1,"snow":0,"sun":8,"wind":5.4,"gust":13.7}},
     {"day":18,"date":"2026-10-16","action":"plant","species":"willow","target":"p9","x":50,"row":2,"title":"A willow sapling on the east bank of the stream","lore":"On a calm golden afternoon a second willow cutting goes into the east bank, so that one day two green crowns will lean toward each other across the stream.","source":"claude","weather":{"date":"2026-10-15","condition":"sun","code":45,"tmax":19.5,"tmin":5.7,"rain":0,"snow":0,"sun":6.6,"wind":3.4,"gust":8.3}},
     {"day":19,"date":"2026-10-17","action":"water","target":"p9","title":"Watering the young willow","lore":"The stream has slipped away in the mild October sun, so the gardener carries water over the dry stones to the new willow on the east bank.","source":"claude","weather":{"date":"2026-10-16","condition":"sun","code":45,"tmax":20.3,"tmin":6.9,"rain":0,"snow":0,"sun":8.3,"wind":4.6,"gust":9.7}},
-    {"day":20,"date":"2026-10-18","action":"build","structure":"barrel","target":"s4","x":22,"row":0,"title":"A rain barrel by the shed","lore":"A long grey day of steady rain, and the gardener sets a wooden barrel beside the shed to catch it for the next dry spell.","source":"claude","weather":{"date":"2026-10-17","condition":"rain","code":61,"tmax":14.2,"tmin":10.6,"rain":7,"snow":0,"sun":0,"wind":10.9,"gust":25.2}}
+    {"day":20,"date":"2026-10-18","action":"build","structure":"barrel","target":"s4","x":22,"row":0,"title":"A rain barrel by the shed","lore":"A long grey day of steady rain, and the gardener sets a wooden barrel beside the shed to catch it for the next dry spell.","source":"claude","weather":{"date":"2026-10-17","condition":"rain","code":61,"tmax":14.2,"tmin":10.6,"rain":7,"snow":0,"sun":0,"wind":10.9,"gust":25.2}},
+    {"day":21,"date":"2026-10-19","action":"plant","species":"apple","target":"p10","x":15,"row":1,"title":"An apple tree sapling on the little hill","lore":"Soft rain on a cool grey day, and a second apple tree is planted on the slope of the little hill, so that one day the bees will have blossom on both sides of the stream.","source":"claude","weather":{"date":"2026-10-18","condition":"rain","code":61,"tmax":11.5,"tmin":8.9,"rain":2.5,"snow":0,"sun":0,"wind":8.4,"gust":19.4}}
   ]
 }
