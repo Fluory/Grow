@@ -16,7 +16,8 @@
     {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":5,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p8","species":"tulip","x":31,"row":1,"day":16,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":4,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p10","species":"apple","x":15,"row":1,"day":21,"stage":2,"bloom":0,"fruit":0,"status":"growing"}
+    {"id":"p10","species":"apple","x":15,"row":1,"day":21,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p11","species":"tulip","x":31,"row":2,"day":23,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
   ],
   "structures": [
     {"id":"s1","type":"beehive","x":11,"row":2,"day":7},
@@ -47,6 +48,7 @@
     {"day":19,"date":"2026-10-17","action":"water","target":"p9","title":"Watering the young willow","lore":"The stream has slipped away in the mild October sun, so the gardener carries water over the dry stones to the new willow on the east bank.","source":"claude","weather":{"date":"2026-10-16","condition":"sun","code":45,"tmax":20.3,"tmin":6.9,"rain":0,"snow":0,"sun":8.3,"wind":4.6,"gust":9.7}},
     {"day":20,"date":"2026-10-18","action":"build","structure":"barrel","target":"s4","x":22,"row":0,"title":"A rain barrel by the shed","lore":"A long grey day of steady rain, and the gardener sets a wooden barrel beside the shed to catch it for the next dry spell.","source":"claude","weather":{"date":"2026-10-17","condition":"rain","code":61,"tmax":14.2,"tmin":10.6,"rain":7,"snow":0,"sun":0,"wind":10.9,"gust":25.2}},
     {"day":21,"date":"2026-10-19","action":"plant","species":"apple","target":"p10","x":15,"row":1,"title":"An apple tree sapling on the little hill","lore":"Soft rain on a cool grey day, and a second apple tree is planted on the slope of the little hill, so that one day the bees will have blossom on both sides of the stream.","source":"claude","weather":{"date":"2026-10-18","condition":"rain","code":61,"tmax":11.5,"tmin":8.9,"rain":2.5,"snow":0,"sun":0,"wind":8.4,"gust":19.4}},
-    {"day":22,"date":"2026-10-20","action":"water","target":"p10","title":"Watering the young apple tree","lore":"A bright, breezy day dries the slope, so the gardener fills a can from the new rain barrel and carries it up to the young apple tree on the hill.","source":"claude","weather":{"date":"2026-10-19","condition":"sun","code":3,"tmax":15.8,"tmin":9.3,"rain":0,"snow":0,"sun":6.7,"wind":13,"gust":29.5}}
+    {"day":22,"date":"2026-10-20","action":"water","target":"p10","title":"Watering the young apple tree","lore":"A bright, breezy day dries the slope, so the gardener fills a can from the new rain barrel and carries it up to the young apple tree on the hill.","source":"claude","weather":{"date":"2026-10-19","condition":"sun","code":3,"tmax":15.8,"tmin":9.3,"rain":0,"snow":0,"sun":6.7,"wind":13,"gust":29.5}},
+    {"day":23,"date":"2026-10-21","action":"plant","species":"tulip","target":"p11","x":31,"row":2,"title":"Tulip bulbs in the middle of the garden at the front","lore":"Under a low, cool sky a fourth tulip bulb goes in just in front of the others, and the little bed in the middle of the garden widens toward the path.","source":"claude","weather":{"date":"2026-10-20","condition":"cloudy","code":3,"tmax":12.7,"tmin":5.3,"rain":0,"snow":0,"sun":2.3,"wind":8.4,"gust":23}}
   ]
 }
