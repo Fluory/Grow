@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 24** · 11 living plants (6 trees) · 4 things built · 8 rain days, 53.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 25** · 12 living plants (6 trees) · 4 things built · 8 rain days, 53.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## October 2026
 
+- **Day 25** · 23 Oct · ☀️ 8.9 h · 🌱 **Tulip bulbs on the little hill at the front** — A bright, blustery day sends the last leaves skittering past the beehive, and the gardener tucks a tulip bulb into the slope beside it for the bees of spring.
+  <br><sub>Sun, 8.9 h: the stream sank to level 2 and the sand bank grew.</sub>
 - **Day 24** · 22 Oct · 🌧️ 11.2 mm · 🪑 **Listening to the rain** — A whole day of heavy rain swells the stream and soaks every root, so the gardener stays in the shed and listens to it drumming on the roof.
   <br><sub>Rain, 11.2 mm: 6 plants grew two stages and the stream rose to level 3.</sub>
 - **Day 23** · 21 Oct · ☁️ 5°/13° · 🌱 **Tulip bulbs in the middle of the garden at the front** — Under a low, cool sky a fourth tulip bulb goes in just in front of the others, and the little bed in the middle of the garden widens toward the path.
