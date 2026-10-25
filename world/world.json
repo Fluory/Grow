@@ -5,18 +5,18 @@
   "place": {"name":"Heilbronn","lat":49.1427,"lon":9.2109},
   "width": 64,
   "rows": 3,
-  "nature": {"water":2,"ice":false,"snow":0},
+  "nature": {"water":3,"ice":false,"snow":0},
   "plants": [
     {"id":"p1","species":"lavender","x":8,"row":0,"day":1,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":12,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":13,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p3","species":"tulip","x":29,"row":1,"day":4,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":9,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":10,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p5","species":"tulip","x":30,"row":1,"day":9,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p6","species":"willow","x":37,"row":1,"day":11,"stage":8,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":7,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p6","species":"willow","x":37,"row":1,"day":11,"stage":9,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":8,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p8","species":"tulip","x":31,"row":1,"day":16,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":6,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p10","species":"apple","x":15,"row":1,"day":21,"stage":5,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":7,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p10","species":"apple","x":15,"row":1,"day":21,"stage":6,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p11","species":"tulip","x":31,"row":2,"day":23,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p12","species":"tulip","x":6,"row":2,"day":25,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
   ],
@@ -53,6 +53,7 @@
     {"day":23,"date":"2026-10-21","action":"plant","species":"tulip","target":"p11","x":31,"row":2,"title":"Tulip bulbs in the middle of the garden at the front","lore":"Under a low, cool sky a fourth tulip bulb goes in just in front of the others, and the little bed in the middle of the garden widens toward the path.","source":"claude","weather":{"date":"2026-10-20","condition":"cloudy","code":3,"tmax":12.7,"tmin":5.3,"rain":0,"snow":0,"sun":2.3,"wind":8.4,"gust":23}},
     {"day":24,"date":"2026-10-22","action":"rest","title":"Listening to the rain","lore":"A whole day of heavy rain swells the stream and soaks every root, so the gardener stays in the shed and listens to it drumming on the roof.","source":"claude","weather":{"date":"2026-10-21","condition":"rain","code":61,"tmax":11.2,"tmin":8.7,"rain":11.2,"snow":0,"sun":0,"wind":10.9,"gust":28.1}},
     {"day":25,"date":"2026-10-23","action":"plant","species":"tulip","target":"p12","x":6,"row":2,"title":"Tulip bulbs on the little hill at the front","lore":"A bright, blustery day sends the last leaves skittering past the beehive, and the gardener tucks a tulip bulb into the slope beside it for the bees of spring.","source":"claude","weather":{"date":"2026-10-22","condition":"sun","code":3,"tmax":14.7,"tmin":7.4,"rain":0,"snow":0,"sun":8.9,"wind":17.9,"gust":40.3}},
-    {"day":26,"date":"2026-10-24","action":"water","target":"p10","title":"Watering the young apple tree","lore":"A gale tears across the hill all afternoon, and the gardener braces the young apple tree with a can from the rain barrel so its roots hold fast.","source":"claude","weather":{"date":"2026-10-23","condition":"cloudy","code":61,"tmax":16.7,"tmin":8.8,"rain":0.5,"snow":0,"sun":1.9,"wind":23.9,"gust":54}}
+    {"day":26,"date":"2026-10-24","action":"water","target":"p10","title":"Watering the young apple tree","lore":"A gale tears across the hill all afternoon, and the gardener braces the young apple tree with a can from the rain barrel so its roots hold fast.","source":"claude","weather":{"date":"2026-10-23","condition":"cloudy","code":61,"tmax":16.7,"tmin":8.8,"rain":0.5,"snow":0,"sun":1.9,"wind":23.9,"gust":54}},
+    {"day":27,"date":"2026-10-25","action":"rest","title":"Listening to the rain","lore":"Showers and sharp gusts take turns all day, so the gardener leaves the garden to the wind and watches the stream rise from the shed door.","source":"claude","weather":{"date":"2026-10-24","condition":"rain","code":80,"tmax":12.2,"tmin":7.9,"rain":1.8,"snow":0,"sun":5.4,"wind":22.7,"gust":47.5}}
   ]
 }
