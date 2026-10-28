@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 29** · 13 living plants (6 trees) · 4 things built · 10 rain days, 71.7 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 30** · 13 living plants (6 trees) · 4 things built · 10 rain days, 71.7 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## October 2026
 
+- **Day 30** · 28 Oct · ☀️ 8.9 h · 💧 **Watering the young apple tree** — A mild, windless day warms the hill like late summer, and the gardener fills a can at the rain barrel for the young apple tree before the sun goes down.
+  <br><sub>Sun, 8.9 h: the stream sank to level 3 and the sand bank grew.</sub>
 - **Day 29** · 27 Oct · ☀️ 7.8 h · 💧 **Watering the young willow** — A dry, bright day dries the bank by the stream, so the gardener carries a full can to the young willow and soaks the ground around its roots.
   <br><sub>Sun, 7.8 h: the stream sank to level 4 and the sand bank grew.</sub>
 - **Day 28** · 26 Oct · 🌧️ 16.0 mm · 🌱 **Tulip bulbs in the middle of the garden at the front** — After a long day of steady rain the soil is soft as bread, and the gardener presses one more tulip bulb into the middle bed before dusk.
