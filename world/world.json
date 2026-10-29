@@ -5,7 +5,7 @@
   "place": {"name":"Heilbronn","lat":49.1427,"lon":9.2109},
   "width": 64,
   "rows": 3,
-  "nature": {"water":3,"ice":false,"snow":0},
+  "nature": {"water":2,"ice":false,"snow":0},
   "plants": [
     {"id":"p1","species":"lavender","x":8,"row":0,"day":1,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":15,"bloom":0,"fruit":0,"status":"growing"},
@@ -19,7 +19,8 @@
     {"id":"p10","species":"apple","x":15,"row":1,"day":21,"stage":9,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p11","species":"tulip","x":31,"row":2,"day":23,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p12","species":"tulip","x":6,"row":2,"day":25,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p13","species":"tulip","x":32,"row":2,"day":28,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
+    {"id":"p13","species":"tulip","x":32,"row":2,"day":28,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p14","species":"tulip","x":7,"row":2,"day":31,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
   ],
   "structures": [
     {"id":"s1","type":"beehive","x":11,"row":2,"day":7},
@@ -58,6 +59,7 @@
     {"day":27,"date":"2026-10-25","action":"rest","title":"Listening to the rain","lore":"Showers and sharp gusts take turns all day, so the gardener leaves the garden to the wind and watches the stream rise from the shed door.","source":"claude","weather":{"date":"2026-10-24","condition":"rain","code":80,"tmax":12.2,"tmin":7.9,"rain":1.8,"snow":0,"sun":5.4,"wind":22.7,"gust":47.5}},
     {"day":28,"date":"2026-10-26","action":"plant","species":"tulip","target":"p13","x":32,"row":2,"title":"Tulip bulbs in the middle of the garden at the front","lore":"After a long day of steady rain the soil is soft as bread, and the gardener presses one more tulip bulb into the middle bed before dusk.","source":"claude","weather":{"date":"2026-10-25","condition":"rain","code":80,"tmax":14.6,"tmin":8.7,"rain":16,"snow":0,"sun":1,"wind":21.4,"gust":48.6}},
     {"day":29,"date":"2026-10-27","action":"water","target":"p9","title":"Watering the young willow","lore":"A dry, bright day dries the bank by the stream, so the gardener carries a full can to the young willow and soaks the ground around its roots.","source":"claude","weather":{"date":"2026-10-26","condition":"sun","code":3,"tmax":13.4,"tmin":9.1,"rain":0,"snow":0,"sun":7.8,"wind":12.7,"gust":31.3}},
-    {"day":30,"date":"2026-10-28","action":"water","target":"p10","title":"Watering the young apple tree","lore":"A mild, windless day warms the hill like late summer, and the gardener fills a can at the rain barrel for the young apple tree before the sun goes down.","source":"claude","weather":{"date":"2026-10-27","condition":"sun","code":45,"tmax":19.5,"tmin":8.3,"rain":0,"snow":0,"sun":8.9,"wind":3.7,"gust":10.8}}
+    {"day":30,"date":"2026-10-28","action":"water","target":"p10","title":"Watering the young apple tree","lore":"A mild, windless day warms the hill like late summer, and the gardener fills a can at the rain barrel for the young apple tree before the sun goes down.","source":"claude","weather":{"date":"2026-10-27","condition":"sun","code":45,"tmax":19.5,"tmin":8.3,"rain":0,"snow":0,"sun":8.9,"wind":3.7,"gust":10.8}},
+    {"day":31,"date":"2026-10-29","action":"plant","species":"tulip","target":"p14","x":7,"row":2,"title":"Tulip bulbs beneath the pine","lore":"A light sprinkle at noon gives way to soft sunshine, and the gardener sets a second tulip bulb on the little hill so the pair can bloom together in spring.","source":"claude","weather":{"date":"2026-10-28","condition":"sun","code":61,"tmax":14.4,"tmin":5.1,"rain":0.7,"snow":0,"sun":6,"wind":9.2,"gust":23.4}}
   ]
 }
