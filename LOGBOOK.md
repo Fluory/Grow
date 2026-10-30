@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 31** · 14 living plants (6 trees) · 4 things built · 10 rain days, 72.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 32** · 14 living plants (6 trees) · 4 things built · 10 rain days, 72.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## October 2026
 
+- **Day 32** · 30 Oct · ☀️ 6.0 h · 💧 **Watering the young pine** — The stream runs thin after a week of dry, cold mornings, so the gardener carries a can up the slope to the young pine and soaks its needles of roots.
+  <br><sub>Sun, 6.0 h: the stream sank to level 1 and the sand bank grew.</sub>
 - **Day 31** · 29 Oct · ☀️ 6.0 h · 🌱 **Tulip bulbs beneath the pine** — A light sprinkle at noon gives way to soft sunshine, and the gardener sets a second tulip bulb on the little hill so the pair can bloom together in spring.
   <br><sub>Sun, 6.0 h: the stream sank to level 2 and the sand bank grew.</sub>
 - **Day 30** · 28 Oct · ☀️ 8.9 h · 💧 **Watering the young apple tree** — A mild, windless day warms the hill like late summer, and the gardener fills a can at the rain barrel for the young apple tree before the sun goes down.
