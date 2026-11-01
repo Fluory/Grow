@@ -4,7 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 33** · 14 living plants (6 trees) · 4 things built · 10 rain days, 72.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 34** · 15 living plants (6 trees) · 4 things built · 10 rain days, 72.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
+
+## November 2026
+
+- **Day 34** · 1 Nov · ☀️ 6.2 h · 🌱 **Tulip bulbs in the west of the garden** — A cold, clear day keeps the ground firm, and the gardener sets a tulip bulb in the west of the garden, close beside the shed, to wait for spring.
+  <br><sub>Sun, 6.2 h: the stream bed lies dry.</sub>
 
 ## October 2026
 
