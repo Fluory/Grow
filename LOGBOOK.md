@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 35** · 15 living plants (6 trees) · 5 things built · 10 rain days, 72.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 36** · 15 living plants (6 trees) · 5 things built · 10 rain days, 72.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## November 2026
 
+- **Day 36** · 3 Nov · ☀️ 7.0 h · 💧 **Watering the young pine** — The night comes close to freezing and the stream stays dry, so the gardener carries a can from the rain barrel to the young pine beside the sundial.
+  <br><sub>Sun, 7.0 h: the stream bed lies dry.</sub>
 - **Day 35** · 2 Nov · ☀️ 7.8 h · 🔨 **A sundial beneath the pine** — After twenty sunny days on record, the gardener sets a stone sundial beneath the pine, and its shadow creeps across the hours of a clear, cold afternoon.
   <br><sub>Sun, 7.8 h: the stream bed lies dry.</sub>
 - **Day 34** · 1 Nov · ☀️ 6.2 h · 🌱 **Tulip bulbs in the west of the garden** — A cold, clear day keeps the ground firm, and the gardener sets a tulip bulb in the west of the garden, close beside the shed, to wait for spring.

@@ -13,7 +13,7 @@
     {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":12,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p5","species":"tulip","x":30,"row":1,"day":9,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p6","species":"willow","x":37,"row":1,"day":11,"stage":12,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":11,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":12,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p8","species":"tulip","x":31,"row":1,"day":16,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":10,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p10","species":"apple","x":15,"row":1,"day":21,"stage":9,"bloom":0,"fruit":0,"status":"growing"},
@@ -66,6 +66,7 @@
     {"day":32,"date":"2026-10-30","action":"water","target":"p7","title":"Watering the young pine","lore":"The stream runs thin after a week of dry, cold mornings, so the gardener carries a can up the slope to the young pine and soaks its needles of roots.","source":"claude","weather":{"date":"2026-10-29","condition":"sun","code":51,"tmax":13,"tmin":3.6,"rain":0,"snow":0,"sun":6,"wind":9.4,"gust":21.6}},
     {"day":33,"date":"2026-10-31","action":"water","target":"p6","title":"Watering the young willow","lore":"The stream bed lies dry for the first time, so the gardener draws water from the rain barrel and carries it to the willow in the middle of the garden.","source":"claude","weather":{"date":"2026-10-30","condition":"sun","code":3,"tmax":12.8,"tmin":3.8,"rain":0,"snow":0,"sun":8,"wind":11.9,"gust":27}},
     {"day":34,"date":"2026-11-01","action":"plant","species":"tulip","target":"p15","x":19,"row":1,"title":"Tulip bulbs in the west of the garden","lore":"A cold, clear day keeps the ground firm, and the gardener sets a tulip bulb in the west of the garden, close beside the shed, to wait for spring.","source":"claude","weather":{"date":"2026-10-31","condition":"sun","code":3,"tmax":10.5,"tmin":2.5,"rain":0,"snow":0,"sun":6.2,"wind":8.9,"gust":22.7}},
-    {"day":35,"date":"2026-11-02","action":"build","structure":"sundial","target":"s5","x":1,"row":1,"title":"A sundial beneath the pine","lore":"After twenty sunny days on record, the gardener sets a stone sundial beneath the pine, and its shadow creeps across the hours of a clear, cold afternoon.","source":"claude","weather":{"date":"2026-11-01","condition":"sun","code":3,"tmax":10.8,"tmin":2.5,"rain":0,"snow":0,"sun":7.8,"wind":10.2,"gust":24.5}}
+    {"day":35,"date":"2026-11-02","action":"build","structure":"sundial","target":"s5","x":1,"row":1,"title":"A sundial beneath the pine","lore":"After twenty sunny days on record, the gardener sets a stone sundial beneath the pine, and its shadow creeps across the hours of a clear, cold afternoon.","source":"claude","weather":{"date":"2026-11-01","condition":"sun","code":3,"tmax":10.8,"tmin":2.5,"rain":0,"snow":0,"sun":7.8,"wind":10.2,"gust":24.5}},
+    {"day":36,"date":"2026-11-03","action":"water","target":"p7","title":"Watering the young pine","lore":"The night comes close to freezing and the stream stays dry, so the gardener carries a can from the rain barrel to the young pine beside the sundial.","source":"claude","weather":{"date":"2026-11-02","condition":"sun","code":45,"tmax":10.2,"tmin":0.1,"rain":0,"snow":0,"sun":7,"wind":10.7,"gust":24.8}}
   ]
 }
