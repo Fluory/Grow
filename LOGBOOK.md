@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 40** · 16 living plants (6 trees) · 5 things built · 10 rain days, 72.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 41** · 16 living plants (6 trees) · 5 things built · 10 rain days, 72.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## November 2026
 
+- **Day 41** · 8 Nov · ☁️ 2°/8° · 💧 **Watering the young pine** — The frost has lifted and a still grey haze hangs over the garden, so the gardener carries a can from the rain barrel to the young pine.
+  <br><sub>Grey, 7.6 °C: a quiet day – nothing grew, nothing broke.</sub>
 - **Day 40** · 7 Nov · 🧊 0°/6° · 🪑 **Frost on every blade of grass** — The first frost of the season silvers the grass under a sunless sky, so the gardener leaves the frozen ground alone and waits by the shed stove.
   <br><sub>Frost, −0.1 °C: nothing grows today.</sub>
 - **Day 39** · 6 Nov · ☀️ 7.8 h · 🪑 **A lazy day in the sun** — A still, sunny day follows a frosty dawn, and the gardener simply sits by the sundial and watches its shadow sweep slowly across the stone.
