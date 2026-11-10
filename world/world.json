@@ -13,7 +13,7 @@
     {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":12,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p5","species":"tulip","x":30,"row":1,"day":9,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p6","species":"willow","x":37,"row":1,"day":11,"stage":12,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":14,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":15,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p8","species":"tulip","x":31,"row":1,"day":16,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":10,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p10","species":"apple","x":15,"row":1,"day":21,"stage":9,"bloom":0,"fruit":0,"status":"growing"},
@@ -75,6 +75,7 @@
     {"day":39,"date":"2026-11-06","action":"rest","title":"A lazy day in the sun","lore":"A still, sunny day follows a frosty dawn, and the gardener simply sits by the sundial and watches its shadow sweep slowly across the stone.","source":"claude","weather":{"date":"2026-11-05","condition":"sun","code":45,"tmax":11.3,"tmin":0.5,"rain":0,"snow":0,"sun":7.8,"wind":9.5,"gust":20.5}},
     {"day":40,"date":"2026-11-07","action":"rest","title":"Frost on every blade of grass","lore":"The first frost of the season silvers the grass under a sunless sky, so the gardener leaves the frozen ground alone and waits by the shed stove.","source":"claude","weather":{"date":"2026-11-06","condition":"frost","code":61,"tmax":6.2,"tmin":-0.1,"rain":0,"snow":0,"sun":0,"wind":5.6,"gust":14}},
     {"day":41,"date":"2026-11-08","action":"water","target":"p7","title":"Watering the young pine","lore":"The frost has lifted and a still grey haze hangs over the garden, so the gardener carries a can from the rain barrel to the young pine.","source":"claude","weather":{"date":"2026-11-07","condition":"cloudy","code":45,"tmax":7.6,"tmin":2.4,"rain":0,"snow":0,"sun":1.4,"wind":3.3,"gust":8.3}},
-    {"day":42,"date":"2026-11-09","action":"plant","species":"tulip","target":"p17","x":20,"row":2,"title":"Tulip bulbs in the west of the garden at the front","lore":"Soft November sunshine warms the soil again, and the gardener sets a tulip bulb at the front of the west bed, just below the shed.","source":"claude","weather":{"date":"2026-11-08","condition":"sun","code":80,"tmax":10.6,"tmin":4.5,"rain":0,"snow":0,"sun":6,"wind":7.2,"gust":16.2}}
+    {"day":42,"date":"2026-11-09","action":"plant","species":"tulip","target":"p17","x":20,"row":2,"title":"Tulip bulbs in the west of the garden at the front","lore":"Soft November sunshine warms the soil again, and the gardener sets a tulip bulb at the front of the west bed, just below the shed.","source":"claude","weather":{"date":"2026-11-08","condition":"sun","code":80,"tmax":10.6,"tmin":4.5,"rain":0,"snow":0,"sun":6,"wind":7.2,"gust":16.2}},
+    {"day":43,"date":"2026-11-10","action":"water","target":"p7","title":"Watering the young pine","lore":"Mild air and a pale, hazy sun drift over the dry stream bed, so the gardener brings the young pine a full can from the rain barrel.","source":"claude","weather":{"date":"2026-11-09","condition":"cloudy","code":45,"tmax":10.8,"tmin":4.9,"rain":0,"snow":0,"sun":4.5,"wind":6.6,"gust":16.6}}
   ]
 }
