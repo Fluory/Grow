@@ -23,7 +23,8 @@
     {"id":"p14","species":"tulip","x":7,"row":2,"day":31,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p15","species":"tulip","x":19,"row":1,"day":34,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p16","species":"tulip","x":13,"row":2,"day":37,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p17","species":"tulip","x":20,"row":2,"day":42,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
+    {"id":"p17","species":"tulip","x":20,"row":2,"day":42,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p18","species":"tulip","x":18,"row":2,"day":44,"stage":1,"bloom":0,"fruit":0,"status":"growing"}
   ],
   "structures": [
     {"id":"s1","type":"beehive","x":11,"row":2,"day":7},
@@ -76,6 +77,7 @@
     {"day":40,"date":"2026-11-07","action":"rest","title":"Frost on every blade of grass","lore":"The first frost of the season silvers the grass under a sunless sky, so the gardener leaves the frozen ground alone and waits by the shed stove.","source":"claude","weather":{"date":"2026-11-06","condition":"frost","code":61,"tmax":6.2,"tmin":-0.1,"rain":0,"snow":0,"sun":0,"wind":5.6,"gust":14}},
     {"day":41,"date":"2026-11-08","action":"water","target":"p7","title":"Watering the young pine","lore":"The frost has lifted and a still grey haze hangs over the garden, so the gardener carries a can from the rain barrel to the young pine.","source":"claude","weather":{"date":"2026-11-07","condition":"cloudy","code":45,"tmax":7.6,"tmin":2.4,"rain":0,"snow":0,"sun":1.4,"wind":3.3,"gust":8.3}},
     {"day":42,"date":"2026-11-09","action":"plant","species":"tulip","target":"p17","x":20,"row":2,"title":"Tulip bulbs in the west of the garden at the front","lore":"Soft November sunshine warms the soil again, and the gardener sets a tulip bulb at the front of the west bed, just below the shed.","source":"claude","weather":{"date":"2026-11-08","condition":"sun","code":80,"tmax":10.6,"tmin":4.5,"rain":0,"snow":0,"sun":6,"wind":7.2,"gust":16.2}},
-    {"day":43,"date":"2026-11-10","action":"water","target":"p7","title":"Watering the young pine","lore":"Mild air and a pale, hazy sun drift over the dry stream bed, so the gardener brings the young pine a full can from the rain barrel.","source":"claude","weather":{"date":"2026-11-09","condition":"cloudy","code":45,"tmax":10.8,"tmin":4.9,"rain":0,"snow":0,"sun":4.5,"wind":6.6,"gust":16.6}}
+    {"day":43,"date":"2026-11-10","action":"water","target":"p7","title":"Watering the young pine","lore":"Mild air and a pale, hazy sun drift over the dry stream bed, so the gardener brings the young pine a full can from the rain barrel.","source":"claude","weather":{"date":"2026-11-09","condition":"cloudy","code":45,"tmax":10.8,"tmin":4.9,"rain":0,"snow":0,"sun":4.5,"wind":6.6,"gust":16.6}},
+    {"day":44,"date":"2026-11-11","action":"plant","species":"tulip","target":"p18","x":18,"row":2,"title":"Tulip bulbs beneath the apple tree","lore":"A fine drizzle barely darkens the soil, and the gardener sets one more tulip bulb on the far side of the young apple tree.","source":"claude","weather":{"date":"2026-11-10","condition":"cloudy","code":61,"tmax":8.4,"tmin":6.6,"rain":0.6,"snow":0,"sun":1.1,"wind":11,"gust":23}}
   ]
 }
