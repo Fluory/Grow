@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 46** · 18 living plants (6 trees) · 6 things built · 11 rain days, 77.6 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 47** · 18 living plants (6 trees) · 6 things built · 11 rain days, 77.6 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## November 2026
 
+- **Day 47** · 14 Nov · ☀️ 7.9 h · 💧 **Watering the young pine** — A bright, cold day dries the stream bed once more, so the gardener carries a can from the rain barrel up to the young pine by the sundial.
+  <br><sub>Sun, 7.9 h: the stream bed lies dry.</sub>
 - **Day 46** · 13 Nov · ☁️ 6°/13° · 🔨 **A mossy stone on the sand bank** — On a grey, blustery afternoon the gardener rolls a mossy stone into place a few steps beyond the stepping stones, where the damp keeps it green.
   <br><sub>Grey, 13.0 °C: a quiet day – nothing grew, nothing broke.</sub>
 - **Day 45** · 12 Nov · 🌧️ 4.4 mm · 🪑 **Listening to the rain** — A soft, steady rain falls all day and wakes the stream again, so the gardener stays in the shed and lets the water do the work.
