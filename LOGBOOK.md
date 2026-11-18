@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 50** · 19 living plants (6 trees) · 6 things built · 12 rain days, 83.0 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 51** · 19 living plants (6 trees) · 6 things built · 13 rain days, 101.4 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## November 2026
 
+- **Day 51** · 18 Nov · 🌧️ 18.4 mm · 🪑 **Listening to the rain** — A wild, warm storm drives heavy rain across the hill all day, so the gardener shelters in the shed and listens to the stream rush past.
+  <br><sub>Rain, 18.4 mm: 1 plant grew two stages and the stream rose to level 3.</sub>
 - **Day 50** · 17 Nov · 🌧️ 4.6 mm · 🌱 **Tulip bulbs in the west of the garden at the front** — Mild rain and sharp gusts thaw the last frost from the beds, and the gardener slips a tulip bulb into the soft soil at the front of the west bed.
   <br><sub>Rain, 4.6 mm: 1 plant grew one stage and the stream rose to level 1.</sub>
 - **Day 49** · 16 Nov · 🧊 0°/10° · 🪑 **Frost on every blade of grass** — Another frosty dawn gives way to a few cold showers and a gusty afternoon, so the gardener stays by the shed and lets the ground rest.
