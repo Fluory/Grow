@@ -145,3 +145,9 @@ Commit pro Tag. Die Pflanzen sind L-Systeme, die mit jedem Regentag komplexer we
 Code: [MIT](LICENSE) · Garden (world data, images, logbook): [CC BY 4.0](world/LICENSE.md) ·
 Weather data: [Open-Meteo](https://open-meteo.com/) (CC BY 4.0) · Built on the
 [fluory development system](https://github.com/Fluory) – `AGENTS.md`, `docs/ARCHITEKTUR.md`.
+
+---
+
+Made by [Florian Hein](https://github.com/Fluory) in Heilbronn. The same way of working – rules in code,
+an AI routine inside guard rails, CI as the gate – is what I use to build software prototypes for
+companies: [see my website](https://final-portfolio-website-ten.vercel.app/en/).
