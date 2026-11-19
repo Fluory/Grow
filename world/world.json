@@ -5,7 +5,7 @@
   "place": {"name":"Heilbronn","lat":49.1427,"lon":9.2109},
   "width": 64,
   "rows": 3,
-  "nature": {"water":3,"ice":false,"snow":0},
+  "nature": {"water":4,"ice":false,"snow":0},
   "plants": [
     {"id":"p1","species":"lavender","x":8,"row":0,"day":1,"stage":2,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p2","species":"oak","x":26,"row":0,"day":3,"stage":15,"bloom":0,"fruit":0,"status":"growing"},
@@ -13,7 +13,7 @@
     {"id":"p4","species":"apple","x":59,"row":2,"day":6,"stage":12,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p5","species":"tulip","x":30,"row":1,"day":9,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p6","species":"willow","x":37,"row":1,"day":11,"stage":12,"bloom":0,"fruit":0,"status":"growing"},
-    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":20,"bloom":0,"fruit":0,"status":"growing"},
+    {"id":"p7","species":"pine","x":4,"row":0,"day":13,"stage":21,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p8","species":"tulip","x":31,"row":1,"day":16,"stage":1,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p9","species":"willow","x":50,"row":2,"day":18,"stage":10,"bloom":0,"fruit":0,"status":"growing"},
     {"id":"p10","species":"apple","x":15,"row":1,"day":21,"stage":9,"bloom":0,"fruit":0,"status":"growing"},
@@ -33,7 +33,8 @@
     {"id":"s3","type":"shed","x":20,"row":0,"day":17},
     {"id":"s4","type":"barrel","x":22,"row":0,"day":20},
     {"id":"s5","type":"sundial","x":1,"row":1,"day":35},
-    {"id":"s6","type":"stone","x":46,"row":0,"day":46}
+    {"id":"s6","type":"stone","x":46,"row":0,"day":46},
+    {"id":"s7","type":"bench","x":2,"row":2,"day":52}
   ],
   "days": [
     {"day":0,"date":"2026-09-28","action":"genesis","title":"An empty garden bed by a stream","lore":"Dark soil, a trickle of water and one question: what will the weather in Heilbronn make of it?","source":"genesis"},
@@ -87,6 +88,7 @@
     {"day":48,"date":"2026-11-15","action":"rest","title":"Frost on every blade of grass","lore":"A hard frost whitens the garden at dawn before a clear sun climbs over the hill, so the gardener leaves the frozen beds untouched today.","source":"claude","weather":{"date":"2026-11-14","condition":"frost","code":56,"tmax":9.7,"tmin":-1.2,"rain":0,"snow":0,"sun":7.3,"wind":8.8,"gust":19.1}},
     {"day":49,"date":"2026-11-16","action":"rest","title":"Frost on every blade of grass","lore":"Another frosty dawn gives way to a few cold showers and a gusty afternoon, so the gardener stays by the shed and lets the ground rest.","source":"claude","weather":{"date":"2026-11-15","condition":"frost","code":61,"tmax":10.3,"tmin":-0.4,"rain":0.8,"snow":0,"sun":2.4,"wind":11.7,"gust":25.9}},
     {"day":50,"date":"2026-11-17","action":"plant","species":"tulip","target":"p19","x":19,"row":2,"title":"Tulip bulbs in the west of the garden at the front","lore":"Mild rain and sharp gusts thaw the last frost from the beds, and the gardener slips a tulip bulb into the soft soil at the front of the west bed.","source":"claude","weather":{"date":"2026-11-16","condition":"rain","code":80,"tmax":12,"tmin":9.5,"rain":4.6,"snow":0,"sun":0.7,"wind":20,"gust":47.5}},
-    {"day":51,"date":"2026-11-18","action":"rest","title":"Listening to the rain","lore":"A wild, warm storm drives heavy rain across the hill all day, so the gardener shelters in the shed and listens to the stream rush past.","source":"claude","weather":{"date":"2026-11-17","condition":"rain","code":80,"tmax":15.9,"tmin":9.2,"rain":18.4,"snow":0,"sun":0.5,"wind":26.6,"gust":60.1}}
+    {"day":51,"date":"2026-11-18","action":"rest","title":"Listening to the rain","lore":"A wild, warm storm drives heavy rain across the hill all day, so the gardener shelters in the shed and listens to the stream rush past.","source":"claude","weather":{"date":"2026-11-17","condition":"rain","code":80,"tmax":15.9,"tmin":9.2,"rain":18.4,"snow":0,"sun":0.5,"wind":26.6,"gust":60.1}},
+    {"day":52,"date":"2026-11-19","action":"build","structure":"bench","target":"s7","x":2,"row":2,"title":"A bench beneath the pine","lore":"Between bright spells and gusty showers the gardener sets a wooden bench beneath the pine, facing the sundial and the long view down the garden.","source":"claude","weather":{"date":"2026-11-18","condition":"rain","code":81,"tmax":13.6,"tmin":10,"rain":8.5,"snow":0,"sun":6.8,"wind":26.3,"gust":59.4}}
   ]
 }
