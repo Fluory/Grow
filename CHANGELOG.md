@@ -5,6 +5,10 @@ Only what changes **in the product** – the daily garden changes live in [LOGBO
 
 ## [Unreleased]
 
+### Security
+- Lockfile: `next` 16.3.6 → 16.4.6, `zod` and `source-map-js` patched (`npm audit fix`, no `package.json` change; one critical and two high advisories in production dependencies).
+- The daily auto-merge only merges the exact commit the check ran on (`--match-head-commit`); a later push to the pull request makes the merge fail instead of slipping through unchecked.
+
 ### Added
 - Garden engine: Heilbronn weather reduced to six conditions (rain grows, sun ripens, frost stops, snow covers, storm fells, grey rests), a stream that rises and widens, ice, snow cover, 13 plants and 13 structures with rules, a deterministic director, replay and verification of the day log.
 - L-system plants with birth levels – every growth level adds a ring of branches; one skeleton for the SVG and the 3D scene.
