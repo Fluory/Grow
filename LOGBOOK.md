@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 54** · 19 living plants (6 trees) · 8 things built · 16 rain days, 121.3 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 55** · 20 living plants (6 trees) · 8 things built · 17 rain days, 122.6 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## November 2026
 
+- **Day 55** · 22 Nov · 🌧️ 1.3 mm · 🌱 **Mushroom spores beneath the pine** — After a week of rain the shade beneath the pine stays damp and dark, and the gardener tucks mushroom spawn into the soft needles beside the bench.
+  <br><sub>Rain, 1.3 mm: 1 plant grew one stage and the stream rose to level 7.</sub>
 - **Day 54** · 21 Nov · 🌧️ 4.6 mm · 🪑 **Listening to the rain** — A sunless, rain-heavy day swells the stream almost to its banks, so the gardener watches from beneath the lantern and leaves the soaked beds alone.
   <br><sub>Rain, 4.6 mm: 1 plant grew one stage and the stream rose to level 6.</sub>
 - **Day 53** · 20 Nov · 🌧️ 6.8 mm · 🔨 **A lantern beneath the pine** — On a dark, rain-swept evening the gardener hangs a small lantern near the young pine, so its warm glow lights the way to the new bench.
