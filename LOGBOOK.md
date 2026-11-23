@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 55** · 20 living plants (6 trees) · 8 things built · 17 rain days, 122.6 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 56** · 20 living plants (6 trees) · 8 things built · 17 rain days, 122.6 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## November 2026
 
+- **Day 56** · 23 Nov · 🧊 -1°/6° · 🪑 **Frost on every blade of grass** — A grey frost locks the stream under its first thin ice, so the gardener leaves the hard ground alone and watches the frozen water from the shed.
+  <br><sub>Frost, −0.9 °C: the stream froze and nothing grows today.</sub>
 - **Day 55** · 22 Nov · 🌧️ 1.3 mm · 🌱 **Mushroom spores beneath the pine** — After a week of rain the shade beneath the pine stays damp and dark, and the gardener tucks mushroom spawn into the soft needles beside the bench.
   <br><sub>Rain, 1.3 mm: 1 plant grew one stage and the stream rose to level 7.</sub>
 - **Day 54** · 21 Nov · 🌧️ 4.6 mm · 🪑 **Listening to the rain** — A sunless, rain-heavy day swells the stream almost to its banks, so the gardener watches from beneath the lantern and leaves the soaked beds alone.
