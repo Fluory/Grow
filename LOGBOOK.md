@@ -4,10 +4,12 @@
 > garden, and the gardener’s one choice. Written by the daily routine ([ROUTINE.md](ROUTINE.md)); the single
 > source of truth is [`world/world.json`](world/world.json). Days marked *auto* were decided by the rule-based director.
 
-**Day 57** · 20 living plants (6 trees) · 9 things built · 17 rain days, 122.6 mm in total · 0 fruit harvested · planted 28 Sep 2026
+**Day 58** · 20 living plants (6 trees) · 9 things built · 17 rain days, 122.6 mm in total · 0 fruit harvested · planted 28 Sep 2026
 
 ## November 2026
 
+- **Day 58** · 25 Nov · 🧊 -5°/5° · 🪑 **Frost on every blade of grass** — The hardest frost yet grips the garden in a clear, bright cold, so the gardener only watches the birdhouse in the pine for its first visitors.
+  <br><sub>Frost, −5.1 °C: nothing grows today.</sub>
 - **Day 57** · 24 Nov · 🧊 -3°/4° · 🔨 **A birdhouse in the pine** — On a bright, frozen morning the gardener climbs the young pine and hangs a small birdhouse in its branches, ready for the winter birds.
   <br><sub>Frost, −2.6 °C: nothing grows today.</sub>
 - **Day 56** · 23 Nov · 🧊 -1°/6° · 🪑 **Frost on every blade of grass** — A grey frost locks the stream under its first thin ice, so the gardener leaves the hard ground alone and watches the frozen water from the shed.
